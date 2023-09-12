@@ -1,0 +1,26 @@
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .starrySkySection,
+    .skySection,
+    .groundSection {
+        width: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .starrySkySection img,
+    .skySection img,
+    .groundSection img {
+        width: 100%;
+        display: block;
+    }
