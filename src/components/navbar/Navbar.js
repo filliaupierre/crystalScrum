@@ -86,7 +86,10 @@ const Navbar = () => {
         <div id="navItems">
           <span>Accueil</span>
           <span>À propos</span>
+          <span>Parcours</span>
+          <span>Services</span>
           <span>Contact</span>
+          <span>Articles</span>
         </div>
       </div>
       <div id="mosaicContainer">
