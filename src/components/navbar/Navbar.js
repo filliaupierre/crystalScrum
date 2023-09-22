@@ -2,11 +2,14 @@ import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import "./Navbar.css";
 import importedOlivinePositions from "./olivinePositions";
+import logo from "./assets/logo.png";
 
 const Navbar = () => {
   const [olivinePositions, setOlivinePositions] = useState([]);
   const mainTimeline = useRef(null);
   const lastAnimated = useRef(0);
+  const olivineImage = (index) =>
+    require(`./assets/dunite/olivine${index + 1}.png`);
 
   useEffect(() => {
     setOlivinePositions(importedOlivinePositions);
@@ -79,7 +82,7 @@ const Navbar = () => {
       onMouseLeave={handleNavbarLeave}
     >
       <div id="navbarInner">
-        <img src="/img/layers/navbar/logo.png" alt="Crystal Scrum" id="logo" />
+        <img src={logo} alt="Crystal Scrum" id="logo" />
         <div id="navItems">
           <span>Accueil</span>
           <span>À propos</span>
@@ -90,7 +93,7 @@ const Navbar = () => {
         {olivinePositions.map((position, index) => (
           <img
             key={index}
-            src={`img/layers/navbar/dunite/olivine${index + 1}.png`}
+            src={olivineImage(index)}
             className="olivine"
             style={{
               left: `calc(${position.left} - 3vw)`,

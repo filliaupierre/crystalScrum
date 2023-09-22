@@ -1,23 +1,24 @@
 // src/components/MainContent.js
 import React from "react";
 import "./MainContent.css";
-
-console.log("Je passe par ici");
+import starrySkyBg from "./assets/starrySkyBg.jpg";
+import skyBg from "./assets/skyBg.png";
+import groundBg from "./assets/groundBg.jpg";
 
 const MainContent = () => (
   <main>
     <div className="vignette"></div>
 
     <div className="starrySkySection">
-      <img src="./img/layers/backgrounds/starrySkyBg.jpg"></img>
+      <img src={starrySkyBg}></img>
     </div>
 
     <div className="skySection">
-      <img src="./img/layers/backgrounds/skyBg.png"></img>
+      <img src={skyBg}></img>
     </div>
 
     <div className="groundSection">
-      <img src="./img/layers/backgrounds/groundBg.jpg" alt=""></img>
+      <img src={groundBg}></img>
     </div>
   </main>
 );
