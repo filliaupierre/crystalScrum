@@ -1,0 +1,61 @@
+// Position spécifique pour chaque olivine
+const olivinePositions = [
+  { top: "1.6vw", left: "18.7vw", width: "8.5vw", height: "8.5vw" }, // 1
+  { top: "2.7vw", left: "2vw", width: "6vw", height: "6vw" }, // 2
+  { top: "10.7vw", left: "3vw", width: "5vw", height: "5vw" }, // 3
+  { top: "11vw", left: "7vw", width: "7vw", height: "7vw" }, // 4
+  { top: "11.7vw", left: "13vw", width: "5vw", height: "5vw" }, // 5
+  { top: "6.2vw", left: "21vw", width: "8vw", height: "8vw" }, // 6
+  { top: "9.2vw", left: "26.2vw", width: "4.8vw", height: "4.8vw" }, // 7
+  { top: "5.9vw", left: "26vw", width: "5vw", height: "5vw" }, // 8
+  { top: "8.9vw", left: "28vw", width: "5.5vw", height: "5.5vw" }, // 9
+  { top: "6.5vw", left: "31.2vw", width: "5vw", height: "5vw" }, // 10
+  { top: "2.7vw", left: "28.2vw", width: "7vw", height: "7vw" }, // 11
+  { top: "3vw", left: "25.8vw", width: "3.6vw", height: "3.6vw" }, // 12
+  { top: "7.4vw", left: "31.1vw", width: "9vw", height: "9vw" }, // 13
+  { top: "3.5vw", left: "34.5vw", width: "6vw", height: "6vw" }, // 14
+  { top: "0.3vw", left: "32.3vw", width: "8vw", height: "8vw" }, // 15
+  { top: "0.1vw", left: "13vw", width: "8vw", height: "8vw" }, // 16
+  { top: "9.5vw", left: "11vw", width: "4.5vw", height: "4.5vw" }, // 17
+  { top: "2.6vw", left: "39.6vw", width: "5.8vw", height: "5.8vw" }, // 18
+  { top: "3vw", left: "44vw", width: "4.8vw", height: "4.8vw" }, // 19
+  { top: "1.7vw", left: "46.7vw", width: "6vw", height: "6vw" }, // 20
+  { top: "3.5vw", left: "49.2vw", width: "3.9vw", height: "3.9vw" }, // 21
+  { top: "1.8vw", left: "6.4vw", width: "5vw", height: "5vw" }, // 22
+  { top: "9.5vw", left: "45.2vw", width: "2.7vw", height: "2.7vw" }, // 23
+  { top: "1.25vw", left: "5.7vw", width: "14vw", height: "14vw" }, // 24
+  { top: "6.2vw", left: "38.8vw", width: "8.4vw", height: "8.4vw" }, // 25
+  { top: "8.4vw", left: "19.4vw", width: "4.2vw", height: "4.2vw" }, // 26
+  { top: "5.3vw", left: "15.6vw", width: "5vw", height: "5vw" }, // 27
+  { top: "2.7vw", left: "15.8vw", width: "8.5vw", height: "8.5vw" }, // 28
+  { top: "4vw", left: "2vw", width: "8vw", height: "8vw" }, // 29
+  { top: "5vw", left: "8.3vw", width: "2.5vw", height: "2.5vw" }, // 30
+  { top: "5.7vw", left: "46vw", width: "9vw", height: "9vw" }, // 31
+  { top: "2.2vw", left: "57.5vw", width: "10vw", height: "10vw" }, // 32
+  { top: "3vw", left: "64.5vw", width: "7vw", height: "7vw" }, // 33
+  { top: "6vw", left: "67.6vw", width: "8.5vw", height: "8.5vw" }, // 34
+  { top: "5.4vw", left: "58.7vw", width: "11vw", height: "11vw" }, // 35
+  { top: "9.5vw", left: "65.1vw", width: "6.3vw", height: "6.3vw" }, // 36
+  { top: "6.5vw", left: "71.1vw", width: "6vw", height: "6vw" }, // 37
+  { top: "2.1vw", left: "68.3vw", width: "6.5vw", height: "6.5vw" }, // 38
+  { top: "9.5vw", left: "74.6vw", width: "4.7vw", height: "4.7vw" }, // 39
+  { top: "2.5vw", left: "76.9vw", width: "8.3vw", height: "8.3vw" }, // 40
+  { top: "6.2vw", left: "76vw", width: "7vw", height: "7vw" }, // 41
+  { top: "9.2vw", left: "79.4vw", width: "5vw", height: "5vw" }, // 42
+  { top: "6.3vw", left: "82.5vw", width: "9vw", height: "9vw" }, // 43
+  { top: "9.9vw", left: "87.4vw", width: "4.3vw", height: "4.3vw" }, // 44
+  { top: "4vw", left: "82.6vw", width: "6.5vw", height: "6.5vw" }, // 45
+  { top: "0.8vw", left: "84.4vw", width: "7vw", height: "7vw" }, // 46
+  { top: "3.9vw", left: "86.9vw", width: "5.8vw", height: "5.8vw" }, // 47
+  { top: "1.1vw", left: "90.7vw", width: "6vw", height: "6vw" }, // 48
+  { top: "3.7vw", left: "90.9vw", width: "6vw", height: "6vw" }, // 49
+  { top: "6.9vw", left: "90.1vw", width: "6.9vw", height: "6.9vw" }, // 50
+  { top: "6.5vw", left: "52.1vw", width: "7.8vw", height: "7.8vw" }, // 51
+  { top: "1.1vw", left: "52vw", width: "9vw", height: "9vw" }, // 52
+  { top: "3vw", left: "73.8vw", width: "7.5vw", height: "7.5vw" }, // 53
+  { top: "2.3vw", left: "96.4vw", width: "7vw", height: "7vw" }, // 54
+  { top: "5vw", left: "95vw", width: "3vw", height: "3vw" }, // 55
+  { top: "6.4vw", left: "96.1vw", width: "7vw", height: "7vw" }, // 56
+];
+
+export default olivinePositions;
