@@ -28,7 +28,7 @@
 }
 
 #logo {
-    height: 170%;
+    height: 6vw;
     width: auto;
     margin-right: 2vw;
     margin-left: 2vw;
@@ -66,7 +66,6 @@
         align-items: center;
         gap: 10px;
         padding-bottom: 2%;
-        /* Augmente légèrement l'espacement pour les petits écrans */
 
     }
 
@@ -81,6 +80,5 @@
     #logo,
     #navItems span {
         font-size: 3vw;
-        /* Augmente la taille de police pour les petits écrans */
     }
 }

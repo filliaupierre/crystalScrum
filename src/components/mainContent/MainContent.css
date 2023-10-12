@@ -18,7 +18,8 @@
         z-index: -1;
     }
 
-    .starrySkySection img,
+
+    /* A changer in fine dans les composants specifique */
     .skySection img,
     .groundSection img {
         width: 100%;

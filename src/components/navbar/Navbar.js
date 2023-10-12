@@ -100,7 +100,7 @@ const Navbar = () => {
             className="olivine"
             style={{
               left: `calc(${position.left} - 3vw)`,
-              top: `calc(${position.top} - 3vw)`,
+              top: `calc(${position.top} - 5vw)`,
               width: position.width,
               height: position.height,
               opacity: 0,

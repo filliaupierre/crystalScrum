@@ -1,0 +1,102 @@
+.scrumS,
+.scrumC,
+.scrumR,
+.scrumU,
+.scrumM,
+.crystalC,
+.crystalR,
+.crystalY,
+.crystalS,
+.crystalT,
+.crystalA,
+.crystalL {
+    position: absolute;
+    z-index: 4;
+}
+
+.scrumS {
+    top: 24vw;
+    left: 36vw;
+    width: 5vw;
+    height: auto;
+}
+
+.scrumC {
+    top: 24.5vw;
+    left: 42vw;
+    width: 5.6vw;
+    height: auto;
+}
+
+.scrumR {
+    top: 24.9vw;
+    left: 48vw;
+    width: 7.8vw;
+    height: auto;
+}
+
+.scrumU {
+    top: 25vw;
+    left: 55.3vw;
+    width: 7vw;
+    height: auto;
+}
+
+.scrumM {
+    top: 24.7vw;
+    left: 63vw;
+    width: 5.6vw;
+    height: auto;
+}
+
+.crystalC {
+    top: 15.30vw;
+    left: 28vw;
+    width: 5.5vw;
+    height: auto;
+}
+
+.crystalR {
+    top: 16.5vw;
+    left: 34vw;
+    width: 6vw;
+    height: auto;
+}
+
+.crystalY {
+    top: 16.6vw;
+    left: 39vw;
+    width: 5vw;
+    height: auto;
+}
+
+.crystalS {
+    top: 16.5vw;
+    left: 43.8vw;
+    width: 4.5vw;
+    height: auto;
+}
+
+
+.crystalT {
+    top: 16vw;
+    left: 48.4vw;
+    width: 5.2vw;
+    height: auto;
+}
+
+
+.crystalA {
+    top: 16.3vw;
+    left: 53vw;
+    width: 5.6vw;
+    height: auto;
+}
+
+
+.crystalL {
+    top: 16.3vw;
+    left: 59vw;
+    width: 5.7vw;
+    height: auto;
+}

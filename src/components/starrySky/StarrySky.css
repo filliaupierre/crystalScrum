@@ -1,0 +1,99 @@
+.starrySkySection {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.starrySkyBg {
+    width: 100%;
+    display: block;
+}
+
+.asteroides1,
+.asteroides2,
+.asteroides3,
+.asteroides4,
+.asteroides5,
+.blackhole1,
+.blackhole2,
+.blackhole3,
+.planet1,
+.planet2,
+.planet3,
+.planet4,
+.planet5,
+.rings1,
+.rings2,
+.rings3,
+.rings4 {
+    position: absolute;
+    z-index: 3;
+}
+
+.asteroides1,
+.asteroides2,
+.asteroides3 {
+    animation-fill-mode: none;
+}
+
+.asteroides1,
+.asteroides1-clone,
+.asteroides2,
+.asteroides2-clone,
+.asteroides3,
+.asteroides3-clone {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    left: 0vw;
+    will-change: transform;
+}
+
+.asteroides1,
+.asteroides1-clone {
+    top: 29vw;
+    z-index: 1;
+}
+
+.asteroides2,
+.asteroides2-clone {
+    top: 25vw;
+    z-index: 3;
+}
+
+.asteroides3,
+.asteroides3-clone {
+    top: 22vw;
+    z-index: 2;
+}
+
+.asteroides1-clone,
+.asteroides2-clone,
+.asteroides3-clone {
+    left: 100vw;
+}
+
+.blackhole2 {
+    top: 40vw;
+    left: 10vw;
+    width: 17vw;
+    height: auto;
+}
+
+/* Utilisation d'un sélecteur pour plusieurs classes ayant les mêmes propriétés */
+.blackhole1,
+.blackhole3,
+.planet1,
+.planet2,
+.planet3,
+.planet4,
+.planet5,
+.rings1,
+.rings2,
+.rings3,
+.rings4 {
+    top: 10vw;
+    left: 10vw;
+    width: 7vw;
+    height: auto;
+}
