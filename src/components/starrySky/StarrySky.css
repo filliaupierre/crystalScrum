@@ -97,3 +97,13 @@
     width: 7vw;
     height: auto;
 }
+
+.galaxy1Wrapper {
+    width: 40vw;
+    height: 40vw;
+    position: absolute;
+    top: 14vw;
+    left: 88vw;
+    transform: translate(-50%, -50%);
+
+}
