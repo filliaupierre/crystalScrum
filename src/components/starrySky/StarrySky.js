@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import "./StarrySky.css";
 import "./letterPositions.css";
 import { gsap } from "gsap";
-import { Scene, PerspectiveCamera, WebGLRenderer } from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 import starrySkyBg from "./assets/starrySkyBg.jpg";
 
@@ -40,8 +38,6 @@ import rings2 from "./assets/rings2.png";
 import rings3 from "./assets/rings3.png";
 import rings4 from "./assets/rings4.png";
 
-import galaxyModel from "./assets/3DObjects/galaxy1.glb";
-
 console.log("starrySky.js loaded");
 
 const StarrySky = () => {
@@ -54,6 +50,7 @@ const StarrySky = () => {
       { className: ".asteroides3", duration: 25 },
     ];
 
+    // GSAP animations
     asteroidAnimations.forEach((animation) => {
       gsap.to(animation.className, {
         x: "-100vw",
@@ -75,76 +72,6 @@ const StarrySky = () => {
         },
       });
     });
-
-    gsap.to(".blackhole2", {
-      duration: 5,
-      rotationX: 45, // inclinaison de 45 degrés
-      rotationY: 360, // rotation complète autour de l'axe Y
-      transformOrigin: "center center",
-      repeat: -1,
-      ease: "linear",
-    });
-
-    // 3D SECTION via Three
-    const scene = new Scene();
-
-    const galaxyRenderer = new WebGLRenderer({ alpha: true });
-    galaxyRenderer.premultipliedAlpha = true;
-    galaxyRenderer.setClearColor(0x000000, 0);
-    galaxyRef.current.appendChild(galaxyRenderer.domElement);
-
-    const galaxyCamera = new PerspectiveCamera(
-      75,
-      galaxyRef.current.clientWidth / galaxyRef.current.clientHeight,
-      0.1,
-      1000
-    );
-    galaxyCamera.position.z = 5;
-
-    let galaxy;
-
-    const loader = new GLTFLoader();
-    loader.load(
-      galaxyModel,
-      (gltf) => {
-        galaxy = gltf.scene;
-        scene.add(galaxy);
-      },
-      undefined,
-      (error) => {
-        console.error("Erreur de chargement du modèle GLTF:", error);
-      }
-    );
-
-    const handleResize = () => {
-      galaxyCamera.aspect =
-        galaxyRef.current.clientWidth / galaxyRef.current.clientHeight;
-      galaxyCamera.updateProjectionMatrix();
-      galaxyRenderer.setSize(
-        galaxyRef.current.clientWidth,
-        galaxyRef.current.clientHeight
-      );
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-
-      if (galaxy) {
-        galaxy.rotation.y += 0.005;
-      }
-
-      galaxyRenderer.render(scene, galaxyCamera);
-    };
-
-    handleResize();
-    animate();
-
-    return () => {
-      galaxyRef.current.removeChild(galaxyRenderer.domElement);
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   const scrumLetters = ["S", "C", "R", "U", "M"];
@@ -227,7 +154,6 @@ const StarrySky = () => {
           alt=""
         />
       ))}
-      <div className="galaxy1Wrapper" ref={galaxyRef}></div>
     </div>
   );
 };
