@@ -25,7 +25,9 @@
 .rings1,
 .rings2,
 .rings3,
-.rings4 {
+.rings4,
+.cloudsPlanet1,
+.cloudsPlanet1-clone {
     position: absolute;
     z-index: 3;
 }
@@ -83,7 +85,6 @@
 /* Utilisation d'un sélecteur pour plusieurs classes ayant les mêmes propriétés */
 .blackhole1,
 .blackhole3,
-.planet1,
 .planet2,
 .planet3,
 .planet4,
@@ -96,4 +97,47 @@
     left: 10vw;
     width: 7vw;
     height: auto;
+}
+
+.planet1Wrapper {
+    position: absolute;
+    top: 7vw;
+    left: 88vw;
+    width: 13vw;
+    height: 13vw;
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 50%;
+
+}
+
+.planet1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.cloudsPlanet1,
+.cloudsPlanet1-leftClone,
+.cloudsPlanet1-rightClone {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+.cloudsPlanet1 {
+    left: 0;
+}
+
+.cloudsPlanet1-leftClone {
+    left: -100%;
+}
+
+.cloudsPlanet1-rightClone {
+    left: 100%;
 }

@@ -27,11 +27,12 @@ import blackhole1 from "./assets/blackhole1.png";
 import blackhole2 from "./assets/blackhole2.png";
 import blackhole3 from "./assets/blackhole3.png";
 
-import planet1 from "./assets/planet1.png";
-import planet2 from "./assets/planet2.png";
-import planet3 from "./assets/planet3.png";
-import planet4 from "./assets/planet4.png";
-import planet5 from "./assets/planet5.png";
+import planet1 from "./assets/planets/planet1.png";
+import planet2 from "./assets/planets/planet2.png";
+import planet3 from "./assets/planets/planet3.png";
+import planet4 from "./assets/planets/planet4.png";
+import planet5 from "./assets/planets/planet5.png";
+import cloudsPlanet1 from "./assets/planets/cloudsPlanet1.png";
 
 import rings1 from "./assets/rings1.png";
 import rings2 from "./assets/rings2.png";
@@ -41,8 +42,6 @@ import rings4 from "./assets/rings4.png";
 console.log("starrySky.js loaded");
 
 const StarrySky = () => {
-  const galaxyRef = React.useRef(null);
-
   useEffect(() => {
     const asteroidAnimations = [
       { className: ".asteroides1", duration: 50 },
@@ -71,6 +70,30 @@ const StarrySky = () => {
           gsap.set(`${animation.className}-clone`, { x: "0vw" });
         },
       });
+
+      // Pour les nuages
+      // Durée de l'animation pour les nuages
+      const cloudsDuration = 10; // Ajustez selon votre besoin
+
+      const animateClouds = (className) => {
+        gsap.to(className, {
+          x: `+=100%`,
+          repeat: -1,
+          ease: "none",
+          duration: cloudsDuration,
+        });
+      };
+
+      animateClouds(".cloudsPlanet1");
+      animateClouds(".cloudsPlanet1-leftClone");
+      animateClouds(".cloudsPlanet1-rightClone");
+    });
+
+    gsap.to(".planet1", {
+      rotation: 360,
+      repeat: -1,
+      ease: "none",
+      duration: 120,
     });
   }, []);
 
@@ -138,14 +161,15 @@ const StarrySky = () => {
           alt=""
         />
       ))}
-      {planets.map((src, index) => (
+
+      {/* {planets.map((src, index) => (
         <img
           key={`planet-${index}`}
           className={`planet${index + 1}`}
           src={src}
           alt=""
         />
-      ))}
+      ))} */}
       {rings.map((src, index) => (
         <img
           key={`rings-${index}`}
@@ -154,6 +178,27 @@ const StarrySky = () => {
           alt=""
         />
       ))}
+      <div className="planet1Wrapper">
+        <img key={`planet-0`} className={`planet1`} src={planet1} alt="" />
+        <img
+          key="cloudsPlanet1"
+          className="cloudsPlanet1"
+          src={cloudsPlanet1}
+          alt=""
+        />
+        <img
+          key="cloudsPlanet1-leftClone"
+          className="cloudsPlanet1-leftClone"
+          src={cloudsPlanet1}
+          alt=""
+        />
+        <img
+          key="cloudsPlanet1-rightClone"
+          className="cloudsPlanet1-rightClone"
+          src={cloudsPlanet1}
+          alt=""
+        />
+      </div>
     </div>
   );
 };
