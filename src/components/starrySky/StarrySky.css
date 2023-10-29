@@ -99,7 +99,7 @@
     height: auto;
 }
 
-.planet1Wrapper {
+.bigPlanetWrapper {
     position: absolute;
     top: 7vw;
     left: 88vw;
@@ -111,7 +111,7 @@
 
 }
 
-.planet1 {
+.bigPlanet {
     position: absolute;
     top: 0;
     left: 0;
@@ -120,9 +120,9 @@
     z-index: 1;
 }
 
-.cloudsPlanet1,
-.cloudsPlanet1-leftClone,
-.cloudsPlanet1-rightClone {
+/* .cloudsBigPlanet,
+.cloudsBigPlanet-leftClone,
+.cloudsBigPlanet-rightClone {
     position: absolute;
     top: 0;
     width: 100%;
@@ -130,14 +130,14 @@
     z-index: 2;
 }
 
-.cloudsPlanet1 {
+.cloudsBigPlanet {
     left: 0;
 }
 
-.cloudsPlanet1-leftClone {
+.cloudsBigPlanet-leftClone {
     left: -100%;
 }
 
-.cloudsPlanet1-rightClone {
+.cloudsBigPlanet-rightClone {
     left: 100%;
-}
+} */
