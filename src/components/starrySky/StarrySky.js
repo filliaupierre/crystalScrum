@@ -3,7 +3,9 @@ import "./StarrySky.css";
 import "./letterPositions.css";
 import { gsap } from "gsap";
 
-import starrySkyBg from "./assets/starrySkyBg.jpg";
+import starrySkyBg from "./assets/starrySkyBg.png";
+import ParallaxElement from "../ParallaxElements/ParallaxElements.js";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import scrumS from "./assets/letters/scrumS.png";
 import scrumC from "./assets/letters/scrumC.png";
@@ -33,6 +35,12 @@ import planet2 from "./assets/planets/planet2.png";
 import planet3 from "./assets/planets/planet3.png";
 import planet4 from "./assets/planets/planet4.png";
 import planet5 from "./assets/planets/planet5.png";
+import planet6 from "./assets/planets/planet6.png";
+import planet7 from "./assets/planets/planet7.png";
+import planet8 from "./assets/planets/planet8.png";
+import planet9 from "./assets/planets/planet9.png";
+import planet10 from "./assets/planets/planet10.png";
+import planet11 from "./assets/planets/planet11.png";
 import cloudsBigPlanet from "./assets/planets/cloudsBigPlanet.png";
 
 import rings1 from "./assets/rings1.png";
@@ -44,6 +52,8 @@ console.log("starrySky.js loaded");
 
 const StarrySky = () => {
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     const asteroidAnimations = [
       { className: ".asteroides1", duration: 50 },
       { className: ".asteroides2", duration: 15 },
@@ -71,30 +81,43 @@ const StarrySky = () => {
           gsap.set(`${animation.className}-clone`, { x: "0vw" });
         },
       });
-
-      // Pour les nuages
-      // Durée de l'animation pour les nuages
-      const cloudsDuration = 10; // Ajustez selon votre besoin
-
-      // const animateClouds = (className) => {
-      //   gsap.to(className, {
-      //     x: `+=100%`,
-      //     repeat: -1,
-      //     ease: "none",
-      //     duration: cloudsDuration,
-      //   });
-      // };
-
-      // animateClouds(".cloudsBigPlanet");
-      // animateClouds(".cloudsBigPlanet-leftClone");
-      // animateClouds(".cloudsBigPlanet-rightClone");
     });
 
+    // GSAP animation for bigPlanet
     gsap.to(".bigPlanet", {
-      rotation: 360,
-      repeat: -1,
-      ease: "none",
-      duration: 120,
+      y: "-70%",
+      scrollTrigger: {
+        trigger: ".bigPlanet",
+        start: "top bottom",
+        end: "bottom center",
+        scrub: true, // Activer l'effet de défilement en douceur
+      },
+    });
+
+    // Associez chaque planète à sa vitesse de rotation en utilisant un objet
+    const rotationSpeeds = {
+      planet1: 5,
+      planet2: 5,
+      planet3: 5,
+      planet4: 5,
+      planet5: 5,
+      planet6: 5,
+      planet7: 5,
+      planet8: 5,
+      planet9: 5,
+      planet10: 5,
+      planet11: 5,
+      bigPlanet: 50,
+    };
+
+    // GSAP animation de rotation pour les planètes
+    Object.entries(rotationSpeeds).forEach(([planet, rotationSpeed]) => {
+      gsap.to(`.${planet}`, {
+        rotation: 360,
+        duration: rotationSpeed,
+        repeat: -1,
+        ease: "linear",
+      });
     });
   }, []);
 
@@ -114,9 +137,20 @@ const StarrySky = () => {
 
   const asteroides = [asteroides1, asteroides2, asteroides3];
   const asteroidesClones = [asteroides1, asteroides2, asteroides3];
-
   const blackholes = [blackhole1, blackhole2, blackhole3];
-  const planets = [planet1, planet2, planet3, planet4, planet5];
+  const planets = [
+    planet1,
+    planet2,
+    planet3,
+    planet4,
+    planet5,
+    planet6,
+    planet7,
+    planet8,
+    planet9,
+    planet10,
+    planet11,
+  ];
   const rings = [rings1, rings2, rings3, rings4];
 
   return (
@@ -179,9 +213,8 @@ const StarrySky = () => {
           alt=""
         />
       ))}
-      <div className="bigPlanetWrapper">
-        <img key={`bigPlanet`} className={`bigPlanet`} src={bigPlanet} alt="" />
-        {/* <img
+      <img className="bigPlanet" src={bigPlanet} alt="" />
+      {/* <img
           key="cloudsBigPlanet"
           className="cloudsBigPlanet"
           src={cloudsBigPlanet}
@@ -199,7 +232,6 @@ const StarrySky = () => {
           src={cloudsBigPlanet}
           alt=""
         /> */}
-      </div>
     </div>
   );
 };

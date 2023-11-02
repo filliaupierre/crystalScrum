@@ -17,11 +17,6 @@
 .blackhole1,
 .blackhole2,
 .blackhole3,
-.planet1,
-.planet2,
-.planet3,
-.planet4,
-.planet5,
 .rings1,
 .rings2,
 .rings3,
@@ -85,10 +80,6 @@
 /* Utilisation d'un sélecteur pour plusieurs classes ayant les mêmes propriétés */
 .blackhole1,
 .blackhole3,
-.planet2,
-.planet3,
-.planet4,
-.planet5,
 .rings1,
 .rings2,
 .rings3,
@@ -99,45 +90,112 @@
     height: auto;
 }
 
-.bigPlanetWrapper {
-    position: absolute;
-    top: 7vw;
-    left: 88vw;
-    width: 13vw;
-    height: 13vw;
-    overflow: hidden;
-    z-index: 2;
-    border-radius: 50%;
-
-}
 
 .bigPlanet {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
+    top: 44vw;
+    left: 62vw;
+    width: 50vw;
+    height: 50vw;
+    z-index: 5;
+    border-radius: 50%;
+}
+
+.planet1 {
+    position: absolute;
+    top: 8vw;
+    left: 77vw;
+    width: 6vw;
+    height: 6vw;
     z-index: 1;
 }
 
-/* .cloudsBigPlanet,
-.cloudsBigPlanet-leftClone,
-.cloudsBigPlanet-rightClone {
+.planet2 {
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 2;
+    top: 10vw;
+    left: 3vw;
+    width: 4vw;
+    height: 4vw;
+    z-index: 1;
 }
 
-.cloudsBigPlanet {
-    left: 0;
+.planet3 {
+    position: absolute;
+    top: 43vw;
+    left: 70vw;
+    width: 4vw;
+    height: 4vw;
+    z-index: 1;
 }
 
-.cloudsBigPlanet-leftClone {
-    left: -100%;
+.planet4 {
+    position: absolute;
+    top: 34vw;
+    left: 10vw;
+    width: 6vw;
+    height: 6vw;
+    z-index: 1;
 }
 
-.cloudsBigPlanet-rightClone {
-    left: 100%;
-} */
+.planet5 {
+    position: absolute;
+    top: 122vw;
+    left: 28vw;
+    width: 12vw;
+    height: 12vw;
+    z-index: 1;
+}
+
+.planet6 {
+    position: absolute;
+    top: 100vw;
+    left: 60vw;
+    width: 8vw;
+    height: 8vw;
+    z-index: 1;
+}
+
+.planet7 {
+    position: absolute;
+    top: 58vw;
+    left: 10vw;
+    width: 7vw;
+    height: 7vw;
+    z-index: 1;
+}
+
+.planet8 {
+    position: absolute;
+    top: 101vw;
+    left: 21vw;
+    width: 10vw;
+    height: 10vw;
+    z-index: 1;
+}
+
+.planet9 {
+    position: absolute;
+    top: 120vw;
+    left: 60vw;
+    width: 9vw;
+    height: 9vw;
+    z-index: 1;
+}
+
+.planet10 {
+    position: absolute;
+    top: 103vw;
+    left: 32vw;
+    width: 4vw;
+    height: 4vw;
+    z-index: 1;
+}
+
+.planet11 {
+    position: absolute;
+    top: 66vw;
+    left: 17vw;
+    width: 20vw;
+    height: 20vw;
+    z-index: 1;
+}
