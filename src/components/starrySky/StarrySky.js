@@ -4,8 +4,10 @@ import "./letterPositions.css";
 import { gsap } from "gsap";
 
 import starrySkyBg from "./assets/starrySkyBg.png";
-import ParallaxElement from "../ParallaxElements/ParallaxElements.js";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { parallaxAnimations } from "../ParallaxFunctions/ParallaxAnimations";
+
+import planetsData from "./planetsData";
 
 import scrumS from "./assets/letters/scrumS.png";
 import scrumC from "./assets/letters/scrumC.png";
@@ -41,7 +43,6 @@ import planet8 from "./assets/planets/planet8.png";
 import planet9 from "./assets/planets/planet9.png";
 import planet10 from "./assets/planets/planet10.png";
 import planet11 from "./assets/planets/planet11.png";
-import cloudsBigPlanet from "./assets/planets/cloudsBigPlanet.png";
 
 import rings1 from "./assets/rings1.png";
 import rings2 from "./assets/rings2.png";
@@ -60,7 +61,7 @@ const StarrySky = () => {
       { className: ".asteroides3", duration: 25 },
     ];
 
-    // GSAP animations
+    // GSAP animations for asteroids
     asteroidAnimations.forEach((animation) => {
       gsap.to(animation.className, {
         x: "-100vw",
@@ -83,43 +84,21 @@ const StarrySky = () => {
       });
     });
 
-    // GSAP animation for bigPlanet
-    gsap.to(".bigPlanet", {
-      y: "-70%",
-      scrollTrigger: {
-        trigger: ".bigPlanet",
-        start: "top bottom",
-        end: "bottom center",
-        scrub: true, // Activer l'effet de défilement en douceur
-      },
-    });
+    const cleanUpAnimations = parallaxAnimations(elementsData);
 
-    // Associez chaque planète à sa vitesse de rotation en utilisant un objet
-    const rotationSpeeds = {
-      planet1: 5,
-      planet2: 5,
-      planet3: 5,
-      planet4: 5,
-      planet5: 5,
-      planet6: 5,
-      planet7: 5,
-      planet8: 5,
-      planet9: 5,
-      planet10: 5,
-      planet11: 5,
-      bigPlanet: 50,
+    return () => {
+      cleanUpAnimations();
     };
-
-    // GSAP animation de rotation pour les planètes
-    Object.entries(rotationSpeeds).forEach(([planet, rotationSpeed]) => {
-      gsap.to(`.${planet}`, {
-        rotation: 360,
-        duration: rotationSpeed,
-        repeat: -1,
-        ease: "linear",
-      });
-    });
   }, []);
+
+  const elementsData = [
+    {
+      className: "bigPlanet", // La classe CSS de l'élément
+      rotationSpeed: 60, // Vitesse de rotation pour l'animation de rotation continue
+      scrollSpeed: -1000, // Vitesse de déplacement vertical liée au scroll
+      parallaxStrength: 0.5, // Force de l'effet de parallaxe lié au mouvement de la souris
+    },
+  ];
 
   const scrumLetters = ["S", "C", "R", "U", "M"];
   const crystalLetters = ["C", "R", "Y", "S", "T", "A", "L"];
@@ -197,14 +176,6 @@ const StarrySky = () => {
         />
       ))}
 
-      {planets.map((src, index) => (
-        <img
-          key={`planet-${index}`}
-          className={`planet${index + 1}`}
-          src={src}
-          alt=""
-        />
-      ))}
       {rings.map((src, index) => (
         <img
           key={`rings-${index}`}
@@ -213,25 +184,16 @@ const StarrySky = () => {
           alt=""
         />
       ))}
-      <img className="bigPlanet" src={bigPlanet} alt="" />
-      {/* <img
-          key="cloudsBigPlanet"
-          className="cloudsBigPlanet"
-          src={cloudsBigPlanet}
-          alt=""
-        />
+
+      {planets.map((src, index) => (
         <img
-          key="cloudsBigPlanet-leftClone"
-          className="cloudsBigPlanet-leftClone"
-          src={cloudsBigPlanet}
-          alt=""
+          key={`planet-${index}`}
+          className={`planet${index + 1}`}
+          src={src}
         />
-        <img
-          key="cloudsBigPlanet-rightClone"
-          className="cloudsBigPlanet-rightClone"
-          src={cloudsBigPlanet}
-          alt=""
-        /> */}
+      ))}
+
+      <img src={bigPlanet} alt="Big Planet" className="bigPlanet" />
     </div>
   );
 };
