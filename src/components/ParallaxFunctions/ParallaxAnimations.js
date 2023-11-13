@@ -1,77 +1,92 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Créez un objet pour stocker la dernière position de défilement pour chaque élément
-let lastScrollYPositions = {};
-
 export const parallaxAnimations = (elementsData) => {
-  // Initialisez lastScrollYPositions pour chaque élément
+  const lastScrollYPositions = {};
+  let mouseMoveActive = true;
+
+  // Initialisation des positions de défilement pour chaque élément
   elementsData.forEach((element) => {
     lastScrollYPositions[element.className] = 0;
   });
 
-  // Enregistrez les animations et les triggers de défilement
+  // Animation de rotation
   elementsData.forEach((element) => {
-    // Animation de rotation
     if (element.rotationSpeed) {
+      console.log(`Applying rotation to ${element.className}`);
       gsap.to(`.${element.className}`, {
         rotation: 360,
         duration: element.rotationSpeed,
         repeat: -1,
-        ease: "none",
+        ease: "linear",
       });
     }
 
-    // ScrollTrigger pour la parallaxe verticale
+    // Parallaxe verticale avec ScrollTrigger
     if (element.scrollSpeed) {
+      console.log(
+        `[parallaxAnimations] Setting up ScrollTrigger verticale for ${element.className}`
+      );
       ScrollTrigger.create({
         trigger: `.${element.className}`,
         start: "top bottom",
         end: "bottom top",
         scrub: true,
         onUpdate: (self) => {
-          const yPos = self.progress * element.scrollSpeed;
-          lastScrollYPositions[element.className] = yPos; // Mettez à jour la position de défilement
-          gsap.to(`.${element.className}`, { y: yPos });
+          console.log(`Scrolling: ${element.className}`);
+          const scrollPosition =
+            self.progress * (window.innerHeight * element.scrollSpeed);
+          lastScrollYPositions[element.className] = scrollPosition;
+          gsap.to(`.${element.className}`, {
+            y: scrollPosition,
+            overwrite: "auto",
+          });
+          console.log(
+            `[parallaxAnimations] ${element.className} - Scroll Position: ${scrollPosition}px`
+          );
         },
       });
     }
   });
 
-  // Gestionnaire d'événements pour la parallaxe avec la souris
+  // Parallaxe avec mouvement de la souris
   const handleMouseMove = (event) => {
-    const posX = (event.clientX / window.innerWidth - 0.5) * 100;
-    const posY = (event.clientY / window.innerHeight - 0.5) * 100;
+    if (!mouseMoveActive) return;
+    {
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      const posX = (event.clientX / viewportWidth - 0.5) * viewportWidth * 2;
+      const posY = (event.clientY / viewportHeight - 0.5) * viewportHeight * 2;
 
-    elementsData.forEach((element) => {
-      if (element.parallaxStrength) {
-        const finalPosY =
-          posY * element.parallaxStrength +
-          lastScrollYPositions[element.className];
-        gsap.to(`.${element.className}`, {
-          x: posX * element.parallaxStrength,
-          y: finalPosY,
-          ease: "none",
-          overwrite: "auto",
-        });
-      }
-    });
+      console.log(`Mouse position: X: ${posX}, Y: ${posY}`);
+      elementsData.forEach((element) => {
+        if (element.parallaxStrength) {
+          const finalPosX = posX * element.parallaxStrength;
+          const finalPosY =
+            posY * element.parallaxStrength +
+            lastScrollYPositions[element.className];
+          console.log(
+            `Applying parallax to ${element.className}: X: ${finalPosX}, Y: ${finalPosY}`
+          );
+          gsap.to(`.${element.className}`, {
+            x: finalPosX,
+            y: finalPosY,
+            ease: "none",
+            overwrite: "auto",
+          });
+        }
+      });
+    }
   };
 
   window.addEventListener("mousemove", handleMouseMove);
 
-  // Fonction de nettoyage
+  // Fonction de nettoyage des animations et écouteurs d'événements
   const cleanUpAnimations = () => {
     window.removeEventListener("mousemove", handleMouseMove);
     ScrollTrigger.getAll().forEach((trigger) => {
-      elementsData.forEach((element) => {
-        if (trigger.vars.trigger === `.${element.className}`) {
-          trigger.kill();
-        }
-      });
+      trigger.kill();
     });
-    // Réinitialisez lastScrollYPositions pour éviter des références obsolètes
-    lastScrollYPositions = {};
   };
 
   return cleanUpAnimations;
