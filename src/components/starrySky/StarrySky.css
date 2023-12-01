@@ -1,12 +1,11 @@
 .starrySkySection {
     position: relative;
-    overflow: hidden;
     width: 100%;
 }
 
 .starrySkyBg {
+    position: absolute;
     width: 100%;
-    display: block;
 }
 
 .asteroides1,
@@ -88,17 +87,6 @@
     left: 10vw;
     width: 7vw;
     height: auto;
-}
-
-
-.bigPlanet {
-    position: absolute;
-    top: 44vw;
-    left: 62vw;
-    width: 50vw;
-    height: 50vw;
-    z-index: 5;
-    border-radius: 50%;
 }
 
 .planet1 {
@@ -263,4 +251,19 @@
     width: 7vw;
     height: auto;
     z-index: 1;
+}
+
+.bigPlanet {
+    position: absolute;
+    top: 44vw;
+    left: 62vw;
+    width: 50vw;
+    height: 50vw;
+    z-index: 6;
+    width: 50vw;
+    height: 50vw;
+}
+
+.elementsWrapper {
+    position: absolute;
 }

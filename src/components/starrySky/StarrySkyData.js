@@ -82,6 +82,12 @@ export const elementsData = [
     scrollSpeed: -2, // vitesse de défilement pour la parallaxe verticale
     parallaxStrength: 0.05, // force de la parallaxe avec le mouvement de la souris
   },
+  // {
+  //   className: "test",
+  //   rotationSpeed: 60, // vitesse de rotation
+  //   scrollSpeed: -5, // vitesse de défilement pour la parallaxe verticale
+  //   parallaxStrength: 0.05, // force de la parallaxe avec le mouvement de la souris
+  // },
 ];
 
 // Noms des classes pour les lettres et autres éléments
