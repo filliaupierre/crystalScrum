@@ -4,7 +4,7 @@ import "./letterPositions.css";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import bigPlanetImage from "./assets/planets/bigPlanet.png";
+import bigPlanetImage from "./assets/starrySkyAssets/planets/bigPlanet.png";
 
 import {
   images,
