@@ -1,26 +1,13 @@
-    body,
-    html {
-        margin: 0;
-        padding: 0;
-    }
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
 
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: clip;
 
-    .skySection,
-    .groundSection {
-        width: 100%;
-        overflow: hidden;
-        z-index: -1;
-    }
-
-
-    /* A changer in fine dans les composants specifique */
-    .skySection img,
-    .groundSection img {
-        width: 100%;
-        display: block;
-    }
+}
