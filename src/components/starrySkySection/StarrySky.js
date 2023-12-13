@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "./StarrySky.css";
+import "./orangeSky.css";
 import "./letterPositions.css";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
@@ -7,8 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import bigPlanetImage from "./assets/starrySkyAssets/planets/bigPlanet.png";
 
 import {
-  images,
-  elementsData,
+  imagesStarrySky,
   scrumLetters,
   crystalLetters,
   asteroides,
@@ -17,6 +17,15 @@ import {
   rings,
   planets,
 } from "./StarrySkyData";
+
+import {
+  imagesOrangeSky,
+  bubbles,
+  clouds,
+  montgolfieres,
+} from "./orangeSkyData";
+
+import { elementsData } from "./animationData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,6 +39,7 @@ const StarrySky = () => {
         start: "top top",
         end: "=+1000",
         scrub: true,
+        markers: true,
       },
     });
 
@@ -126,75 +136,105 @@ const StarrySky = () => {
   });
 
   return (
-    <div className="starrySkySection">
+    <div className="completeSection">
       <img
         className="starrySkyBg"
-        src={images.completeSkyBg}
+        src={imagesStarrySky.completeSkyBg}
         alt="Starry Sky Background"
       />
       <div className="elementsWrapper">
-        <div className="lettersWrapper">
-          {scrumLetters.map((className, index) => (
+        <div className="starrySkySection">
+          <div className="lettersWrapper">
+            {scrumLetters.map((className, index) => (
+              <img
+                key={`${className}-${index}`}
+                className={className}
+                src={imagesStarrySky[className]}
+                alt=""
+              />
+            ))}
+            {crystalLetters.map((className, index) => (
+              <img
+                key={`${className}-${index}`}
+                className={className}
+                src={imagesStarrySky[className]}
+                alt=""
+              />
+            ))}
+          </div>
+          <div className="asteroidesWrapper">
+            {asteroides.map((className, index) => (
+              <img
+                key={`${className}-${index}`}
+                className={className}
+                src={imagesStarrySky[className]}
+                alt=""
+              />
+            ))}
+            {asteroidesClones.map((className, index) => (
+              <img
+                key={`${className}-${index}`}
+                className={className}
+                src={imagesStarrySky[className.replace("-clone", "")]}
+                alt=""
+              />
+            ))}
+          </div>
+          {blackholes.map((className, index) => (
             <img
               key={`${className}-${index}`}
               className={className}
-              src={images[className]}
+              src={imagesStarrySky[className]}
               alt=""
             />
           ))}
-          {crystalLetters.map((className, index) => (
+          {rings.map((className, index) => (
             <img
               key={`${className}-${index}`}
               className={className}
-              src={images[className]}
+              src={imagesStarrySky[className]}
               alt=""
             />
           ))}
+          {planets.map((className, index) => (
+            <div className={`${className}Wrapper`}>
+              <img
+                key={`${className}-${index}`}
+                className={className}
+                src={imagesStarrySky[className]}
+                alt=""
+              />
+            </div>
+          ))}
+          <div className="bigPlanetWrapper">
+            <img className="bigPlanet" src={bigPlanetImage} alt="Big Planet" />
+          </div>
         </div>
-        <div className="asteroidesWrapper">
-          {asteroides.map((className, index) => (
+        <div className="orangeSkySection">
+          {bubbles.map((className, index) => (
             <img
               key={`${className}-${index}`}
               className={className}
-              src={images[className]}
+              src={imagesOrangeSky[className]}
               alt=""
             />
           ))}
-          {asteroidesClones.map((className, index) => (
+          {clouds.map((className, index) => (
             <img
               key={`${className}-${index}`}
               className={className}
-              src={images[className.replace("-clone", "")]}
+              src={imagesOrangeSky[className]}
               alt=""
             />
           ))}
-        </div>
-        {blackholes.map((className, index) => (
-          <img
-            key={`${className}-${index}`}
-            className={className}
-            src={images[className]}
-            alt=""
-          />
-        ))}
-        {rings.map((className, index) => (
-          <img
-            key={`${className}-${index}`}
-            className={className}
-            src={images[className]}
-            alt=""
-          />
-        ))}
-        {planets.map((className, index) => (
-          <img
-            key={`${className}-${index}`}
-            className={className}
-            src={images[className]}
-            alt=""
-          />
-        ))}
-        <div className="bigPlanetWrapper">
-          <img className="bigPlanet" src={bigPlanetImage} alt="Big Planet" />
+          {montgolfieres.map((className, index) => (
+            <img
+              key={`${className}-${index}`}
+              className={className}
+              src={imagesOrangeSky[className]}
+              alt=""
+            />
+          ))}
         </div>
       </div>
     </div>

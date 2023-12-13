@@ -35,8 +35,8 @@ import rings3 from "./assets/starrySkyAssets/rings3.png";
 import rings4 from "./assets/starrySkyAssets/rings4.png";
 import bigPlanet from "./assets/starrySkyAssets/planets/bigPlanet.png";
 
-// Exportation des images et des données pour les éléments animés
-export const images = {
+// Exportation des images et des données pour les éléments animés dans la section starrySky
+export const imagesStarrySky = {
   completeSkyBg,
   scrumS,
   scrumC,
@@ -73,22 +73,6 @@ export const images = {
   rings4,
   bigPlanet,
 };
-
-// Configuration des éléments pour les animations de parallaxe
-export const elementsData = [
-  {
-    className: "bigPlanet",
-    rotationSpeed: 60, // vitesse de rotation
-    scrollSpeed: -2, // vitesse de défilement pour la parallaxe verticale
-    parallaxStrength: 0.05, // force de la parallaxe avec le mouvement de la souris
-  },
-  // {
-  //   className: "test",
-  //   rotationSpeed: 60, // vitesse de rotation
-  //   scrollSpeed: -5, // vitesse de défilement pour la parallaxe verticale
-  //   parallaxStrength: 0.05, // force de la parallaxe avec le mouvement de la souris
-  // },
-];
 
 // Noms des classes pour les lettres et autres éléments
 export const scrumLetters = ["S", "C", "R", "U", "M"].map(
