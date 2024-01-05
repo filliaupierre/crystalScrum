@@ -144,20 +144,32 @@ const StarrySky = () => {
       <div className="starrySkySection">
         <div className="lettersWrapper">
           {scrumLetters.map((className, index) => (
-            <img
+            <div
               key={`${className}-${index}`}
-              className={className}
-              src={imagesStarrySky[className]}
-              alt=""
-            />
+              className={`${className}Container`}
+            >
+              <div className={`${className}Wrapper`}>
+                <img
+                  className={className}
+                  src={imagesStarrySky[className]}
+                  alt=""
+                />
+              </div>
+            </div>
           ))}
           {crystalLetters.map((className, index) => (
-            <img
+            <div
               key={`${className}-${index}`}
-              className={className}
-              src={imagesStarrySky[className]}
-              alt=""
-            />
+              className={`${className}Container`}
+            >
+              <div className={`${className}Wrapper`}>
+                <img
+                  className={className}
+                  src={imagesStarrySky[className]}
+                  alt=""
+                />
+              </div>
+            </div>
           ))}
         </div>
         <div className="asteroidesWrapper">
