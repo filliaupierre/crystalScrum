@@ -31,6 +31,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const StarrySky = () => {
   const parallaxYPositions = useRef({}); // Pour mémoriser les positions Y de parallaxe
+  const mouseMoveAnimations = useRef({});
+
+  const isElementVisible = (className) => {
+    const element = document.querySelector(`.${className}Container`);
+    if (!element) return false;
+
+    const rect = element.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom >= 0;
+  };
 
   useGSAP(() => {
     elementsData.forEach((element) => {
@@ -49,8 +58,16 @@ const StarrySky = () => {
           start: "clamp(top bottom)", // Début de l'animation (haut de l'élément touche le bas de la fenêtre)
           end: "bottom top",
           scrub: true,
-          refreshInit: true,
           markers: true,
+          onEnter: () => activateMouseMoveAnimation(element.className),
+          onLeave: () => deactivateMouseMoveAnimation(element.className),
+          onEnterBack: () => activateMouseMoveAnimation(element.className),
+          onLeaveBack: () => deactivateMouseMoveAnimation(element.className),
+          onRefresh: (self) => {
+            if (self.isActive) {
+              activateMouseMoveAnimation(element.className);
+            }
+          },
         },
       });
 
@@ -75,39 +92,25 @@ const StarrySky = () => {
           ease: "linear",
         });
       }
+
+      if (element.parallaxStrength) {
+        mouseMoveAnimations.current[element.className] = {
+          x: gsap.quickTo(`.${element.className}`, "x", {
+            duration: 0.5,
+            ease: "easeInOutQuint",
+          }),
+          y: gsap.quickTo(`.${element.className}`, "y", {
+            duration: 0.5,
+            ease: "easeInOutQuint",
+          }),
+        };
+      }
+
+      // Activez les animations de mouvement de la souris si l'élément est visible au chargement
+      if (isElementVisible(element.className)) {
+        activateMouseMoveAnimation(element.className);
+      }
     });
-
-    // Configuration des animations de mouvement de la souris
-    const xTo = elementsData.map((element) =>
-      gsap.quickTo(`.${element.className}`, "x", {
-        duration: 0.5,
-        ease: "easeInOutQuint",
-      })
-    );
-    const yTo = elementsData.map((element) =>
-      gsap.quickTo(`.${element.className}`, "y", {
-        duration: 0.5,
-        ease: "easeInOutQuint",
-      })
-    );
-
-    // Gestion du mouvement de la souris
-    const mouseMoveHandler = (event) => {
-      const viewportWidth = window.innerWidth;
-      const viewportHeight = window.innerHeight;
-      const posX = (event.clientX / viewportWidth - 0.5) * viewportWidth * 2;
-      const posY = (event.clientY / viewportHeight - 0.5) * viewportHeight * 2;
-
-      elementsData.forEach((element, i) => {
-        if (element.parallaxStrength) {
-          const currentY = parallaxYPositions.current[element.className] || 0;
-
-          xTo[i](posX * element.parallaxStrength);
-          yTo[i](currentY + posY * element.parallaxStrength);
-        }
-      });
-    };
-    window.addEventListener("mousemove", mouseMoveHandler);
 
     // Configuration des animations continues des astéroïdes
     asteroides.forEach((className, index) => {
@@ -128,11 +131,35 @@ const StarrySky = () => {
       });
     });
 
-    // Fonction de nettoyage
-    return () => {
-      window.removeEventListener("mousemove", mouseMoveHandler);
-    };
+    window.addEventListener("mousemove", handleMouseMove);
   });
+
+  const activateMouseMoveAnimation = (className) => {
+    parallaxYPositions.current[className] = true;
+  };
+
+  const deactivateMouseMoveAnimation = (className) => {
+    parallaxYPositions.current[className] = false;
+  };
+
+  const handleMouseMove = (event) => {
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const posX = (event.clientX / viewportWidth - 0.5) * viewportWidth * 2;
+    const posY = (event.clientY / viewportHeight - 0.5) * viewportHeight * 2;
+
+    elementsData.forEach((element) => {
+      if (isElementVisible(element.className)) {
+        activateMouseMoveAnimation(element.className);
+      }
+
+      if (parallaxYPositions.current[element.className]) {
+        const { x, y } = mouseMoveAnimations.current[element.className];
+        x(posX * element.parallaxStrength);
+        y(posY * element.parallaxStrength);
+      }
+    });
+  };
 
   return (
     <div className="completeSection">
