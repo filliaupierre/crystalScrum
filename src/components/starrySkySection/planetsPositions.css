@@ -1,0 +1,144 @@
+.bigPlanetContainer {
+    position: absolute;
+    top: 44vw;
+    left: 62vw;
+    z-index: 4;
+}
+
+.planet1Container {
+    position: absolute;
+    top: 18vw;
+    left: 77vw;
+    z-index: 1;
+}
+
+.planet2Container {
+    position: absolute;
+    top: 10vw;
+    left: 3vw;
+    z-index: 1;
+}
+
+.planet3Container {
+    position: absolute;
+    top: 43vw;
+    left: 56vw;
+    z-index: 1;
+}
+
+.planet4Container {
+    position: absolute;
+    top: 36vw;
+    left: 6vw;
+    z-index: 1;
+}
+
+.planet5Container {
+    position: absolute;
+    top: 147vw;
+    left: 12vw;
+    z-index: 1;
+}
+
+.planet6Container {
+    position: absolute;
+    top: 140vw;
+    left: 60vw;
+    z-index: 1;
+}
+
+.planet7Container {
+    position: absolute;
+    top: 115vw;
+    left: 59vw;
+    z-index: 1;
+}
+
+.planet8Container {
+    position: absolute;
+    top: 95vw;
+    left: 70vw;
+    z-index: 2;
+}
+
+.planet9Container {
+    position: absolute;
+    top: 160vw;
+    left: 60vw;
+    z-index: 1;
+}
+
+.planet10Container {
+    position: absolute;
+    top: 95vw;
+    left: 61vw;
+    z-index: 1;
+}
+
+.planet11Container {
+    position: absolute;
+    top: 70vw;
+    left: 7vw;
+    z-index: 1;
+}
+
+
+.bigPlanet {
+    width: 50vw;
+    height: 50vw;
+}
+
+.planet1 {
+    width: 9vw;
+    height: 9vw;
+}
+
+.planet2 {
+    width: 6vw;
+    height: auto;
+}
+
+.planet3 {
+    width: 8vw;
+    height: auto;
+}
+
+.planet4 {
+    width: 13vw;
+    height: auto;
+}
+
+.planet5 {
+    width: 20vw;
+    height: 20vw;
+}
+
+.planet6 {
+    width: 12vw;
+    height: 12vw;
+}
+
+.planet7 {
+    width: 13vw;
+    height: 13vw;
+}
+
+.planet8 {
+    width: 15vw;
+    height: 15vw;
+}
+
+.planet9 {
+    width: 25vw;
+    height: 25vw;
+}
+
+.planet10 {
+    width: 7vw;
+    height: 7vw;
+}
+
+.planet11 {
+    width: 30vw;
+    height: 30vw;
+}

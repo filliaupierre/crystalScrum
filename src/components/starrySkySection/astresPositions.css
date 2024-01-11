@@ -1,0 +1,72 @@
+.blackhole2Container {
+    position: absolute;
+    top: 44vw;
+    left: 80vw;
+    z-index: 1;
+}
+
+.blackhole3Container {
+    position: absolute;
+    top: 79vw;
+    left: 85vw;
+    z-index: 1;
+}
+
+.rings1Container {
+    position: absolute;
+    top: 67vw;
+    left: 2vw;
+    z-index: 1;
+}
+
+.rings2Container {
+    position: absolute;
+    top: 7vw;
+    left: 91vw;
+    z-index: 1;
+}
+
+.rings3Container {
+    position: absolute;
+    top: 24vw;
+    left: 14vw;
+    z-index: 1;
+}
+
+.rings4Container {
+    position: absolute;
+    top: 37vw;
+    left: 30vw;
+    z-index: 1;
+}
+
+
+.blackhole2 {
+    width: 7vw;
+    height: auto;
+}
+
+.blackhole3 {
+    width: 9vw;
+    height: auto;
+}
+
+.rings1 {
+    width: 9vw;
+    height: auto;
+}
+
+.rings2 {
+    width: 4vw;
+    height: auto;
+}
+
+.rings3 {
+    width: 5vw;
+    height: auto;
+}
+
+.rings4 {
+    width: 6vw;
+    height: auto;
+}

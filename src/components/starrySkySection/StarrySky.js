@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import "./StarrySky.css";
 import "./orangeSky.css";
 import "./letterPositions.css";
+import "./planetsPositions.css";
+import "./astresPositions.css";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -30,7 +32,7 @@ import { elementsData } from "./animationData";
 gsap.registerPlugin(ScrollTrigger);
 
 const StarrySky = () => {
-  const parallaxYPositions = useRef({}); // Pour mémoriser les positions Y de parallaxe
+  const parallaxYPositions = useRef({}); // Pour mémoriser les positions Y de parallaxe (mousemoeve)
   const mouseMoveAnimations = useRef({});
 
   const isElementVisible = (className) => {
@@ -218,20 +220,32 @@ const StarrySky = () => {
           ))}
         </div>
         {blackholes.map((className, index) => (
-          <img
+          <div
             key={`${className}-${index}`}
-            className={className}
-            src={imagesStarrySky[className]}
-            alt=""
-          />
+            className={`${className}Container`}
+          >
+            <div className={`${className}Wrapper`}>
+              <img
+                className={className}
+                src={imagesStarrySky[className]}
+                alt=""
+              />
+            </div>
+          </div>
         ))}
         {rings.map((className, index) => (
-          <img
+          <div
             key={`${className}-${index}`}
-            className={className}
-            src={imagesStarrySky[className]}
-            alt=""
-          />
+            className={`${className}Container`}
+          >
+            <div className={`${className}Wrapper`}>
+              <img
+                className={className}
+                src={imagesStarrySky[className]}
+                alt=""
+              />
+            </div>
+          </div>
         ))}
         {planets.map((className, index) => (
           <div
@@ -255,28 +269,46 @@ const StarrySky = () => {
       </div>
       <div className="orangeSkySection">
         {bubbles.map((className, index) => (
-          <img
+          <div
             key={`${className}-${index}`}
-            className={className}
-            src={imagesOrangeSky[className]}
-            alt=""
-          />
+            className={`${className}Container`}
+          >
+            <div className={`${className}Wrapper`}>
+              <img
+                className={className}
+                src={imagesOrangeSky[className]}
+                alt=""
+              />
+            </div>
+          </div>
         ))}
         {clouds.map((className, index) => (
-          <img
+          <div
             key={`${className}-${index}`}
-            className={className}
-            src={imagesOrangeSky[className]}
-            alt=""
-          />
+            className={`${className}Container`}
+          >
+            <div className={`${className}Wrapper`}>
+              <img
+                className={className}
+                src={imagesOrangeSky[className]}
+                alt=""
+              />
+            </div>
+          </div>
         ))}
         {montgolfieres.map((className, index) => (
-          <img
+          <div
             key={`${className}-${index}`}
-            className={className}
-            src={imagesOrangeSky[className]}
-            alt=""
-          />
+            className={`${className}Container`}
+          >
+            <div className={`${className}Wrapper`}>
+              <img
+                className={className}
+                src={imagesOrangeSky[className]}
+                alt=""
+              />
+            </div>
+          </div>
         ))}
       </div>
     </div>

@@ -15,7 +15,6 @@ import crystalL from "./assets/starrySkyAssets/letters/crystalL.png";
 import asteroides1 from "./assets/starrySkyAssets/asteroides1.png";
 import asteroides2 from "./assets/starrySkyAssets/asteroides2.png";
 import asteroides3 from "./assets/starrySkyAssets/asteroides3.png";
-import blackhole1 from "./assets/starrySkyAssets/blackhole1.png";
 import blackhole2 from "./assets/starrySkyAssets/blackhole2.png";
 import blackhole3 from "./assets/starrySkyAssets/blackhole3.png";
 import planet1 from "./assets/starrySkyAssets/planets/planet1.png";
@@ -53,7 +52,6 @@ export const imagesStarrySky = {
   asteroides1,
   asteroides2,
   asteroides3,
-  blackhole1,
   blackhole2,
   blackhole3,
   planet1,
@@ -87,7 +85,7 @@ export const asteroidesClones = [
   "asteroides2-clone",
   "asteroides3-clone",
 ];
-export const blackholes = ["blackhole1", "blackhole2", "blackhole3"];
+export const blackholes = ["blackhole2", "blackhole3"];
 export const planets = [
   "planet1",
   "planet2",

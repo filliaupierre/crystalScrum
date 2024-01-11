@@ -2,77 +2,90 @@
 export const elementsData = [
   {
     className: "bigPlanet",
-    rotationSpeed: 60, // vitesse de rotation
+    rotationSpeed: 120, // vitesse de rotation
     scrollSpeed: -5, // vitesse de défilement pour la parallaxe verticale
-    parallaxStrength: 0.05, // force de la parallaxe avec le mouvement de la souris
+    parallaxStrength: 0.06, // force de la parallaxe avec le mouvement de la souris
   },
   {
     className: "planet1",
     rotationSpeed: 50,
     scrollSpeed: -0.3,
-    parallaxStrength: 0.04,
+    parallaxStrength: 0.03,
   },
   {
     className: "planet2",
-    rotationSpeed: 20,
+    rotationSpeed: 60,
     scrollSpeed: -0.1,
-    parallaxStrength: 0.01,
+    parallaxStrength: 0.005,
   },
   {
     className: "planet3",
     rotationSpeed: 50,
     scrollSpeed: -0.5,
-    parallaxStrength: 0.02,
+    parallaxStrength: 0.01,
   },
   {
     className: "planet4",
-    rotationSpeed: 25,
+    rotationSpeed: 85,
     scrollSpeed: -0.3,
-    parallaxStrength: 0.05,
+    parallaxStrength: 0.02,
   },
   {
     className: "planet7",
     rotationSpeed: 32,
     scrollSpeed: -1,
-    parallaxStrength: 0.07,
+    parallaxStrength: 0.04,
   },
   {
     className: "planet8",
     rotationSpeed: 55,
     scrollSpeed: -1,
-    parallaxStrength: 0.04,
+    parallaxStrength: 0.03,
   },
   {
     className: "planet10",
-    rotationSpeed: 30,
+    rotationSpeed: 70,
     scrollSpeed: -0.5,
-    parallaxStrength: 0.01,
+    parallaxStrength: 0.02,
   },
   {
     className: "planet11",
-    rotationSpeed: 40,
+    rotationSpeed: 80,
     scrollSpeed: -1.3,
-    parallaxStrength: 0.08,
+    parallaxStrength: 0.04,
   },
 
+  //Sur ce nibveau, rajouter de nombreux vaisseaux, genre station spaciale.
   {
     className: "planet5",
     rotationSpeed: 40,
     scrollSpeed: -1.3,
-    parallaxStrength: 0.08,
+    parallaxStrength: 0.03,
   },
   {
     className: "planet6",
     rotationSpeed: 40,
     scrollSpeed: -1.3,
-    parallaxStrength: 0.08,
+    parallaxStrength: 0.04,
   },
   {
     className: "planet9",
     rotationSpeed: 40,
     scrollSpeed: -1.3,
-    parallaxStrength: 0.08,
+    parallaxStrength: 0.05,
   },
+
+  { className: "blackhole2", scrollSpeed: -0.05, parallaxStrength: 0.003 },
+  {
+    className: "blackhole3",
+    rotationSpeed: 150,
+    scrollSpeed: -0.05,
+    parallaxStrength: 0.003,
+  },
+  { className: "rings1", scrollSpeed: -0.05, parallaxStrength: 0.002 },
+  { className: "rings2", scrollSpeed: -0.05, parallaxStrength: 0.002 },
+  { className: "rings3", scrollSpeed: -0.05, parallaxStrength: 0.002 },
+  { className: "rings4", scrollSpeed: -0.05, parallaxStrength: 0.002 },
 
   {
     className: "scrumS",
