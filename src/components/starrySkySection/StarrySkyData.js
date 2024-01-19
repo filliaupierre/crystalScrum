@@ -33,10 +33,12 @@ import rings2 from "./assets/starrySkyAssets/rings2.png";
 import rings3 from "./assets/starrySkyAssets/rings3.png";
 import rings4 from "./assets/starrySkyAssets/rings4.png";
 import bigPlanet from "./assets/starrySkyAssets/planets/bigPlanet.png";
+import buttonLoadingScreen from "./assets/starrySkyAssets/buttonLoadingScreen.png";
 
 // Exportation des images et des données pour les éléments animés dans la section starrySky
 export const imagesStarrySky = {
   completeSkyBg,
+  buttonLoadingScreen,
   scrumS,
   scrumC,
   scrumR,

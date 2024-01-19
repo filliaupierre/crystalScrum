@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./StarrySky.css";
 import "./orangeSky.css";
 import "./letterPositions.css";
@@ -58,6 +58,20 @@ const StarrySky = () => {
     const rect = element.getBoundingClientRect();
     return rect.top < window.innerHeight && rect.bottom >= 0;
   };
+
+  useEffect(() => {
+    // Gérer le défilement
+    if (showLoadingScreen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Nettoyage : réactiver le scrolling lorsque le composant est démonté
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showLoadingScreen]);
 
   useGSAP(() => {
     elementsData.forEach((element) => {
@@ -184,10 +198,13 @@ const StarrySky = () => {
       {showLoadingScreen && (
         <div className="loadingScreen">
           <div className="loadingContent">
-            <p>Chargement des étoiles...</p>
-            <button onClick={handleButtonClick} className="launchButton">
-              Lancer l'application
-            </button>
+            <div className="launchButton">
+              <img
+                src={imagesStarrySky.buttonLoadingScreen}
+                alt="Page de chargement"
+                onClick={handleButtonClick}
+              />
+            </div>
           </div>
         </div>
       )}
