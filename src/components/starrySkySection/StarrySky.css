@@ -19,6 +19,26 @@
     z-index: 1000;
 }
 
+.loadingTitle h1 {
+    position: absolute;
+    top: 3%;
+    left: 25.5%;
+    color: whitesmoke;
+    font-family: 'Julius Sans One', sans-serif;
+    letter-spacing: 2vw;
+    font-size: 5vh;
+}
+
+.loadingTitle h2 {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    font-size: medium;
+    color: whitesmoke;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3vh;
+    letter-spacing: 0.5vw;
+}
 
 .launchButton {
     position: absolute;
@@ -30,30 +50,32 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
-
 .launchButton:hover {
     transform: scale(1.5);
     animation: waves 2s linear infinite;
 }
 
-@keyframes waves {
-    0% {
-        box-shadow: 0 0 0 0rem rgba(0, 1, 1, 0.2), 0 0 0 1rem rgba(0, 1, 1, 0.2),
-            0 0 0 2rem rgba(0, 1, 1, 0.2), 0 0 0 5rem rgba(0, 1, 1, 0.2);
-    }
-
-    100% {
-        box-shadow: 0 0 0 1rem rgba(0, 1, 1, 0.2), 0 0 0 2rem rgba(0, 1, 1, 0.2),
-            0 0 0 5rem rgba(0, 1, 1, 0.2), 0 0 0 8rem rgba(0, 1, 1, 0);
-    }
-}
 
 .launchButton.disabled {
-    background-color: #aaa;
-    /* Couleur pour le bouton désactivé */
     cursor: not-allowed;
+}
+
+.messageContainer {
+    position: absolute;
+    top: 76vh;
+    left: 65vw;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.handwrittenMessage {
+    font-size: 5vh;
+    white-space: nowrap;
+    overflow: hidden;
+    color: blanchedalmond;
+    font-family: 'Dancing Script', cursive;
+    animation: writeMessage 5s steps(100) forwards;
+
 }
 
 .starrySkyBg {
@@ -98,4 +120,28 @@
 .asteroides2-clone,
 .asteroides3-clone {
     left: 100vw;
+}
+
+
+
+@keyframes waves {
+    0% {
+        box-shadow: 0 0 0 0rem rgba(0, 1, 1, 0.2), 0 0 0 1rem rgba(0, 1, 1, 0.2),
+            0 0 0 2rem rgba(0, 1, 1, 0.2), 0 0 0 5rem rgba(0, 1, 1, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 0 1rem rgba(0, 1, 1, 0.2), 0 0 0 2rem rgba(0, 1, 1, 0.2),
+            0 0 0 5rem rgba(0, 1, 1, 0.2), 0 0 0 8rem rgba(0, 1, 1, 0);
+    }
+}
+
+@keyframes writeMessage {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }

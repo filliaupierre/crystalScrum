@@ -24,7 +24,7 @@
 
 #logo,
 #navItems span {
-    font-size: 1.8vw;
+    font-size: 1.3vw;
 }
 
 #logo {
@@ -39,7 +39,8 @@
     gap: 70px;
     align-items: center;
     color: white;
-    font-family: 'Handjet', cursive;
+    font-family: 'Nova Mono', monospace;
+    font-size: medium;
 }
 
 #mosaicContainer {

@@ -98,6 +98,7 @@ const Navbar = () => {
             key={index}
             src={olivineImage(index)}
             className="olivine"
+            alt="olivine"
             style={{
               left: `calc(${position.left} - 3vw)`,
               top: `calc(${position.top} - 5vw)`,

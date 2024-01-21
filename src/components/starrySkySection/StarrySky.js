@@ -45,7 +45,7 @@ const StarrySky = () => {
     timelineSplashScreen.from(".planetsWrapper", {
       y: -500,
       autoAlpha: 0,
-      duration: 3,
+      duration: 4,
       ease: "easeInOutQuint",
       clearProps: "all",
     });
@@ -90,7 +90,6 @@ const StarrySky = () => {
           start: "clamp(top bottom)", // Début de l'animation (haut de l'élément touche le bas de la fenêtre)
           end: "bottom top",
           scrub: true,
-          markers: true,
           onEnter: () => activateMouseMoveAnimation(element.className),
           onLeave: () => deactivateMouseMoveAnimation(element.className),
           onEnterBack: () => activateMouseMoveAnimation(element.className),
@@ -198,12 +197,19 @@ const StarrySky = () => {
       {showLoadingScreen && (
         <div className="loadingScreen">
           <div className="loadingContent">
+            <div className="loadingTitle">
+              <h1>Crystal Scrum</h1>
+              <h2>by Pierre Filliau</h2>
+            </div>
             <div className="launchButton">
               <img
                 src={imagesStarrySky.buttonLoadingScreen}
-                alt="Page de chargement"
+                alt="Clic"
                 onClick={handleButtonClick}
               />
+            </div>
+            <div className="messageContainer">
+              <p className="handwrittenMessage">Your beacon for agility.</p>
             </div>
           </div>
         </div>
