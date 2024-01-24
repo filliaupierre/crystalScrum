@@ -1,8 +1,35 @@
-.scrumSContainer,
-.scrumCContainer,
-.scrumRContainer,
-.scrumUContainer,
-.scrumMContainer,
+.fog1Container,
+.fog2Container,
+.fog3Container,
+.fog4Container,
+.fog5Container,
+.fog6Container {
+    position: absolute;
+    color: red;
+}
+
+.fog1 {
+    width: 45vw;
+    height: auto;
+}
+
+.fog2 {
+    width: 45vw;
+    height: auto;
+}
+
+.fog3 {
+    width: 40vw;
+    height: auto;
+}
+
+.fog4,
+.fog5,
+.fog6 {
+    width: 15vw;
+    height: auto;
+}
+
 .crystalCContainer,
 .crystalRContainer,
 .crystalYContainer,
@@ -12,6 +39,15 @@
 .crystalLContainer {
     position: absolute;
     z-index: 4;
+}
+
+.scrumSContainer,
+.scrumCContainer,
+.scrumRContainer,
+.scrumUContainer,
+.scrumMContainer {
+    position: absolute;
+    z-index: 5;
 }
 
 .scrumSContainer {
@@ -77,6 +113,41 @@
     left: 59vw;
 }
 
+.fog1Container {
+    top: 14vw;
+    left: 24vw;
+    z-index: 3;
+}
+
+.fog2Container {
+    top: 16vw;
+    left: 28vw;
+    z-index: 4;
+}
+
+.fog3Container {
+    top: 20vw;
+    left: 31vw;
+    z-index: 5;
+}
+
+.fog4Container {
+    top: 19vw;
+    left: 53vw;
+    z-index: 4;
+}
+
+.fog5Container {
+    top: 15vw;
+    left: 32vw;
+    z-index: 4;
+}
+
+.fog6Container {
+    top: 21vw;
+    left: 41vw;
+    z-index: 5;
+}
 
 .scrumS {
     width: 5vw;

@@ -18,6 +18,7 @@ import {
   blackholes,
   rings,
   planets,
+  fogs,
 } from "./StarrySkyData";
 
 import {
@@ -247,6 +248,21 @@ const StarrySky = () => {
                     src={imagesStarrySky[className]}
                     alt=""
                   />
+                </div>
+              </div>
+            ))}
+            {fogs.map((className, index) => (
+              <div
+                key={`${className}-${index}`}
+                className={`${className}Container`}
+              >
+                <div className={`${className}Wrapper`}>
+                  <img
+                    className={className}
+                    src={imagesStarrySky[className]}
+                    alt=""
+                  />
+                  {className}
                 </div>
               </div>
             ))}

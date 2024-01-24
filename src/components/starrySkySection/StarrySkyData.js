@@ -34,6 +34,12 @@ import rings3 from "./assets/starrySkyAssets/rings3.png";
 import rings4 from "./assets/starrySkyAssets/rings4.png";
 import bigPlanet from "./assets/starrySkyAssets/planets/bigPlanet.png";
 import buttonLoadingScreen from "./assets/starrySkyAssets/buttonLoadingScreen.png";
+import fog1 from "./assets/starrySkyAssets/fog/fogWCr.png";
+import fog2 from "./assets/starrySkyAssets/fog/fogWinter.png";
+import fog3 from "./assets/starrySkyAssets/fog/fogWScr.png";
+import fog4 from "./assets/starrySkyAssets/fog/fogWalone.png";
+import fog5 from "./assets/starrySkyAssets/fog/fogWalone.png";
+import fog6 from "./assets/starrySkyAssets/fog/fogWalone.png";
 
 // Exportation des images et des données pour les éléments animés dans la section starrySky
 export const imagesStarrySky = {
@@ -72,6 +78,12 @@ export const imagesStarrySky = {
   rings3,
   rings4,
   bigPlanet,
+  fog1,
+  fog2,
+  fog3,
+  fog4,
+  fog5,
+  fog6,
 };
 
 // Noms des classes pour les lettres et autres éléments
@@ -102,3 +114,5 @@ export const planets = [
   "planet11",
 ];
 export const rings = ["rings1", "rings2", "rings3", "rings4"];
+
+export const fogs = ["fog1", "fog2", "fog3", "fog4", "fog5", "fog6"];

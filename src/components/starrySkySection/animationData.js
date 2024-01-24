@@ -148,4 +148,10 @@ export const elementsData = [
     scrollSpeed: -0.8,
     parallaxStrength: 0.005,
   },
+  { className: "fog1", scrollSpeed: -1, parallaxStrength: 0.008 },
+  { className: "fog2", scrollSpeed: -1, parallaxStrength: 0.02 },
+  { className: "fog3", scrollSpeed: -2, parallaxStrength: 0.04 },
+  { className: "fog4", scrollSpeed: -1.5, parallaxStrength: 0.04 },
+  { className: "fog5", scrollSpeed: -1.5, parallaxStrength: 0.05 },
+  { className: "fog6", scrollSpeed: -1.5, parallaxStrength: 0.07 },
 ];
