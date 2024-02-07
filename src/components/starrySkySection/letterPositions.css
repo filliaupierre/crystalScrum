@@ -5,7 +5,8 @@
 .fog5Container,
 .fog6Container {
     position: absolute;
-    color: red;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .fog1 {
@@ -128,7 +129,7 @@
 .fog3Container {
     top: 20vw;
     left: 31vw;
-    z-index: 5;
+    z-index: 4;
 }
 
 .fog4Container {

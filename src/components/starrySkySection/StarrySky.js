@@ -37,18 +37,67 @@ const StarrySky = () => {
   const parallaxYPositions = useRef({}); // Pour mémoriser les positions Y de parallaxe (mousemoeve)
   const mouseMoveAnimations = useRef({});
 
+  // Animation au moment du clic
   const handleButtonClick = () => {
-    setShowLoadingScreen(false); // Cache la page de chargement
+    const timeline = gsap.timeline();
 
-    const timelineSplashScreen = gsap.timeline();
-
-    // Animation du conteneur lettersWrapper
-    timelineSplashScreen.from(".planetsWrapper", {
-      y: -500,
+    // Animation de disparition de la page de chargement
+    timeline.to(".loadingScreen", {
       autoAlpha: 0,
-      duration: 4,
-      ease: "easeInOutQuint",
-      clearProps: "all",
+      duration: 1,
+      onComplete: () => setShowLoadingScreen(false), // Cache la page de chargement après l'animation
+    });
+
+    // Animations des planètes
+    timeline.fromTo(
+      ".planetsWrapper",
+      { y: -500, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, duration: 4, ease: "power1.out" },
+      "<"
+    );
+
+    // Animations des lettres (Scrum et Crystal) avec des vitesses différentes
+    [...scrumLetters, ...crystalLetters].forEach((className) => {
+      timeline.fromTo(
+        `.${className}Container`,
+        { y: -500, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: Math.random() * 3 + 2, // entre 2 et 5 secondes
+          ease: "power1.out",
+        },
+        "<"
+      );
+    });
+
+    // Animations des astéroïdes
+    timeline.fromTo(
+      ".asteroidesWrapper",
+      { y: 500, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, duration: 4, ease: "power1.out" },
+      "<"
+    );
+
+    // Animation des fogs individuellement
+    [
+      "fog1Container",
+      "fog2Container",
+      "fog3Container",
+      "fog4Container",
+      "fog5Container",
+      "fog6Container",
+    ].forEach((className) => {
+      timeline.fromTo(
+        `.${className}`,
+        { autoAlpha: 0 }, // Démarre avec le fog invisible
+        {
+          autoAlpha: 1,
+          duration: 1.5,
+          ease: "power1.inOut",
+        },
+        "+=0" // Commence après un délai d'une seconde de la fin des autres animations
+      );
     });
   };
 
@@ -222,7 +271,7 @@ const StarrySky = () => {
           alt="Starry Sky Background"
         />
         <div className="starrySkySection">
-          <div className="lettersWrapper">
+          <div className="lettersScrumWrapper">
             {scrumLetters.map((className, index) => (
               <div
                 key={`${className}-${index}`}
@@ -237,6 +286,8 @@ const StarrySky = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="lettersCrystalWrapper">
             {crystalLetters.map((className, index) => (
               <div
                 key={`${className}-${index}`}
@@ -251,6 +302,8 @@ const StarrySky = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="fogsWrapper">
             {fogs.map((className, index) => (
               <div
                 key={`${className}-${index}`}
@@ -262,7 +315,6 @@ const StarrySky = () => {
                     src={imagesStarrySky[className]}
                     alt=""
                   />
-                  {className}
                 </div>
               </div>
             ))}

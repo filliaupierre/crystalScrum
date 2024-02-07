@@ -42,19 +42,24 @@
 
 .launchButton {
     position: absolute;
-    top: 33%;
-    left: 45.5%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -100%);
     cursor: pointer;
     border: none;
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.launchButton:hover {
-    transform: scale(1.5);
-    animation: waves 2s linear infinite;
+.launchButton img {
+    width: 20vw;
+    height: 20vw;
 }
 
+.launchButton:hover {
+    transform: translate(-50%, -100%) scale(1.5);
+    animation: waves 2s linear infinite;
+}
 
 .launchButton.disabled {
     cursor: not-allowed;
