@@ -1,0 +1,343 @@
+.spaceStationContainer {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 1;
+}
+
+.spaceShipA1 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipA2 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipA3 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipA4 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipB1 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipB2 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipB3 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipC1 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipD1 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipD2 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipD3 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipE1 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipE2 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipE3 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipF1 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipF2 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipF3 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipG1 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipG2 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceShipG3 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceStation1 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceStation2 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceStation3 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceStation4 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceStation5 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceStation6 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceStation7 {
+    width: 7vw;
+    height: auto;
+}
+
+.spaceStation8 {
+    width: 7vw;
+    height: auto;
+}
+
+
+.spaceShipA1Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipA2Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipA3Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipA4Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipB1Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipB2Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipB3Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipC1Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipD1Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipD2Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipD3Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipE1Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipE2Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipE3Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipF1Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipF2Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipF3Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipG1Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipG2Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceShipG3Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceStation1Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceStation2Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceStation3Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceStation4Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceStation5Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceStation6Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceStation7Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}
+
+.spaceStation8Container {
+    position: absolute;
+    top: 104vw;
+    left: 80vw;
+    z-index: 3;
+}

@@ -4,6 +4,7 @@ import "./orangeSky.css";
 import "./letterPositions.css";
 import "./planetsPositions.css";
 import "./astresPositions.css";
+import "./spaceStationPositions.css";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -19,6 +20,8 @@ import {
   rings,
   planets,
   fogs,
+  spaceshipGroups,
+  spaceStations,
 } from "./StarrySkyData";
 
 import {
@@ -389,6 +392,39 @@ const StarrySky = () => {
                 alt="Big Planet"
               />
             </div>
+          </div>
+
+          <div className="spaceShipsWrapper">
+            {spaceshipGroups.map((group, groupIndex) =>
+              group.map((className, index) => (
+                <div
+                  key={`${className}-${index}`}
+                  className={`${className}Container`}
+                >
+                  <div className={`${className}Wrapper`}>
+                    <img
+                      className={className}
+                      src={imagesStarrySky[className]}
+                      alt=""
+                    />
+                  </div>
+                </div>
+              ))
+            )}
+            {spaceStations.map((className, index) => (
+              <div
+                key={`${className}-${index}`}
+                className={`${className}Container`}
+              >
+                <div className={`${className}Wrapper`}>
+                  <img
+                    className={className}
+                    src={imagesStarrySky[className]}
+                    alt=""
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         <div className="orangeSkySection">

@@ -40,6 +40,34 @@ import fog3 from "./assets/starrySkyAssets/fog/fogWScr.png";
 import fog4 from "./assets/starrySkyAssets/fog/fogWalone.png";
 import fog5 from "./assets/starrySkyAssets/fog/fogWalone.png";
 import fog6 from "./assets/starrySkyAssets/fog/fogWalone.png";
+import spaceShipA1 from "./assets/starrySkyAssets/spaceStation/spaceShipA1.png";
+import spaceShipA2 from "./assets/starrySkyAssets/spaceStation/spaceShipA2.png";
+import spaceShipA3 from "./assets/starrySkyAssets/spaceStation/spaceShipA3.png";
+import spaceShipA4 from "./assets/starrySkyAssets/spaceStation/spaceShipA4.png";
+import spaceShipB1 from "./assets/starrySkyAssets/spaceStation/spaceShipB1.png";
+import spaceShipB2 from "./assets/starrySkyAssets/spaceStation/spaceShipB2.png";
+import spaceShipB3 from "./assets/starrySkyAssets/spaceStation/spaceShipB3.png";
+import spaceShipC1 from "./assets/starrySkyAssets/spaceStation/spaceShipC1.png";
+import spaceShipD1 from "./assets/starrySkyAssets/spaceStation/spaceShipD1.png";
+import spaceShipD2 from "./assets/starrySkyAssets/spaceStation/spaceShipD2.png";
+import spaceShipD3 from "./assets/starrySkyAssets/spaceStation/spaceShipD3.png";
+import spaceShipE1 from "./assets/starrySkyAssets/spaceStation/spaceShipE1.png";
+import spaceShipE2 from "./assets/starrySkyAssets/spaceStation/spaceShipE2.png";
+import spaceShipE3 from "./assets/starrySkyAssets/spaceStation/spaceShipE3.png";
+import spaceShipF1 from "./assets/starrySkyAssets/spaceStation/spaceShipF1.png";
+import spaceShipF2 from "./assets/starrySkyAssets/spaceStation/spaceShipF2.png";
+import spaceShipF3 from "./assets/starrySkyAssets/spaceStation/spaceShipF3.png";
+import spaceShipG1 from "./assets/starrySkyAssets/spaceStation/spaceShipG1.png";
+import spaceShipG2 from "./assets/starrySkyAssets/spaceStation/spaceShipG2.png";
+import spaceShipG3 from "./assets/starrySkyAssets/spaceStation/spaceShipG3.png";
+import spaceStation1 from "./assets/starrySkyAssets/spaceStation/spaceStation1.png";
+import spaceStation2 from "./assets/starrySkyAssets/spaceStation/spaceStation2.png";
+import spaceStation3 from "./assets/starrySkyAssets/spaceStation/spaceStation3.png";
+import spaceStation4 from "./assets/starrySkyAssets/spaceStation/spaceStation4.png";
+import spaceStation5 from "./assets/starrySkyAssets/spaceStation/spaceStation5.png";
+import spaceStation6 from "./assets/starrySkyAssets/spaceStation/spaceStation6.png";
+import spaceStation7 from "./assets/starrySkyAssets/spaceStation/spaceStation7.png";
+import spaceStation8 from "./assets/starrySkyAssets/spaceStation/spaceStation8.png";
 
 // Exportation des images et des données pour les éléments animés dans la section starrySky
 export const imagesStarrySky = {
@@ -84,6 +112,34 @@ export const imagesStarrySky = {
   fog4,
   fog5,
   fog6,
+  spaceShipA1,
+  spaceShipA2,
+  spaceShipA3,
+  spaceShipA4,
+  spaceShipB1,
+  spaceShipB2,
+  spaceShipB3,
+  spaceShipC1,
+  spaceShipD1,
+  spaceShipD2,
+  spaceShipD3,
+  spaceShipE1,
+  spaceShipE2,
+  spaceShipE3,
+  spaceShipF1,
+  spaceShipF2,
+  spaceShipF3,
+  spaceShipG1,
+  spaceShipG2,
+  spaceShipG3,
+  spaceStation1,
+  spaceStation2,
+  spaceStation3,
+  spaceStation4,
+  spaceStation5,
+  spaceStation6,
+  spaceStation7,
+  spaceStation8,
 };
 
 // Noms des classes pour les lettres et autres éléments
@@ -116,3 +172,37 @@ export const planets = [
 export const rings = ["rings1", "rings2", "rings3", "rings4"];
 
 export const fogs = ["fog1", "fog2", "fog3", "fog4", "fog5", "fog6"];
+
+export const spaceShipsA = [
+  "spaceShipA1",
+  "spaceShipA2",
+  "spaceShipA3",
+  "spaceShipA4",
+];
+export const spaceShipsB = ["spaceShipB1", "spaceShipB2", "spaceShipB3"];
+export const spaceShipsC = ["spaceShipC1"];
+export const spaceShipsD = ["spaceShipD1", "spaceShipD2", "spaceShipD3"];
+export const spaceShipsE = ["spaceShipE1", "spaceShipE2", "spaceShipE3"];
+export const spaceShipsF = ["spaceShipF1", "spaceShipF2", "spaceShipF3"];
+export const spaceShipsG = ["spaceShipG1", "spaceShipG2", "spaceShipG3"];
+
+export const spaceshipGroups = [
+  spaceShipsA,
+  spaceShipsB,
+  spaceShipsC,
+  spaceShipsD,
+  spaceShipsE,
+  spaceShipsF,
+  spaceShipsG,
+];
+
+export const spaceStations = [
+  "spaceStation1",
+  "spaceStation2",
+  "spaceStation3",
+  "spaceStation4",
+  "spaceStation5",
+  "spaceStation6",
+  "spaceStation7",
+  "spaceStation8",
+];
