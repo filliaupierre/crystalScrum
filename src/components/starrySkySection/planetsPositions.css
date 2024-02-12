@@ -42,7 +42,7 @@
 
 .planet6Container {
     position: absolute;
-    top: 140vw;
+    top: 135vw;
     left: 60vw;
     z-index: 1;
 }
@@ -85,12 +85,12 @@
 
 .bigPlanet {
     width: 50vw;
-    height: 50vw;
+    height: auto;
 }
 
 .planet1 {
     width: 9vw;
-    height: 9vw;
+    height: auto;
 }
 
 .planet2 {
@@ -109,36 +109,36 @@
 }
 
 .planet5 {
-    width: 20vw;
-    height: 20vw;
+    width: 12vw;
+    height: auto;
 }
 
 .planet6 {
-    width: 12vw;
-    height: 12vw;
+    width: 8vw;
+    height: auto;
 }
 
 .planet7 {
     width: 13vw;
-    height: 13vw;
+    height: auto;
 }
 
 .planet8 {
     width: 15vw;
-    height: 15vw;
+    height: auto;
 }
 
 .planet9 {
-    width: 25vw;
-    height: 25vw;
+    width: 12vw;
+    height: auto;
 }
 
 .planet10 {
     width: 7vw;
-    height: 7vw;
+    height: auto;
 }
 
 .planet11 {
     width: 30vw;
-    height: 30vw;
+    height: auto;
 }

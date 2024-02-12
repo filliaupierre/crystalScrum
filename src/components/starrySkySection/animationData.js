@@ -58,21 +58,62 @@ export const elementsData = [
   //Sur ce nibveau, rajouter de nombreux vaisseaux, genre station spaciale.
   {
     className: "planet5",
-    rotationSpeed: 40,
-    scrollSpeed: -1.3,
+    rotationSpeed: 100,
+    scrollSpeed: -1.0,
     parallaxStrength: 0.03,
   },
   {
     className: "planet6",
-    rotationSpeed: 40,
+    rotationSpeed: 120,
     scrollSpeed: -1.3,
-    parallaxStrength: 0.04,
+    parallaxStrength: 0.03,
   },
   {
     className: "planet9",
-    rotationSpeed: 40,
+    rotationSpeed: 110,
+    scrollSpeed: -0.9,
+    parallaxStrength: 0.02,
+  },
+
+  {
+    className: "spaceStation1",
+    scrollSpeed: -0.4,
+    parallaxStrength: 0.015,
+  },
+  {
+    className: "spaceStation2",
+    scrollSpeed: -0.3,
+    parallaxStrength: 0.01,
+  },
+  {
+    className: "spaceStation3",
+    scrollSpeed: -0.3,
+    parallaxStrength: 0.01,
+  },
+  {
+    className: "spaceStation4",
+    scrollSpeed: -0.3,
+    parallaxStrength: 0.01,
+  },
+  {
+    className: "spaceStation5",
+    scrollSpeed: -0.3,
+    parallaxStrength: 0.01,
+  },
+  {
+    className: "spaceStation6",
+    scrollSpeed: -1.4,
+    parallaxStrength: 0.06,
+  },
+  {
+    className: "spaceStation7",
+    scrollSpeed: -1.5,
+    parallaxStrength: 0.042,
+  },
+  {
+    className: "spaceStation8",
     scrollSpeed: -1.3,
-    parallaxStrength: 0.05,
+    parallaxStrength: 0.035,
   },
 
   { className: "blackhole2", scrollSpeed: -0.05, parallaxStrength: 0.003 },
