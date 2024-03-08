@@ -16,7 +16,7 @@
     position: absolute;
     top: 67vw;
     left: 2vw;
-    z-index: 1;
+    z-index: 0;
 }
 
 .rings2Container {

@@ -32,6 +32,7 @@ import {
 } from "./orangeSkyData";
 
 import { elementsData } from "./animationData";
+import { spaceshipData } from "./animationData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,6 +56,14 @@ const StarrySky = () => {
     timeline.fromTo(
       ".planetsWrapper",
       { y: -500, autoAlpha: 0 },
+      { y: 0, autoAlpha: 1, duration: 4, ease: "power1.out" },
+      "<"
+    );
+
+    // Animations des planètes
+    timeline.fromTo(
+      ".bigPlanetWrapper",
+      { y: 500, autoAlpha: 0 },
       { y: 0, autoAlpha: 1, duration: 4, ease: "power1.out" },
       "<"
     );
@@ -215,6 +224,49 @@ const StarrySky = () => {
       });
     });
 
+    const animations = {}; // Stocke les références des animations
+
+    spaceshipData.forEach(({ className, duration, angle }) => {
+      const element = document.querySelector(`.${className}`);
+      if (!element) return;
+
+      const cosAngle = Math.cos(angle * (Math.PI / 180));
+      const sinAngle = Math.sin(angle * (Math.PI / 180));
+      const moveDistance = window.innerWidth * 1.5;
+
+      const startAnimation = () => {
+        if (!animations[className]) {
+          animations[className] = gsap
+            .timeline({ repeat: -1, paused: true })
+            .fromTo(
+              element,
+              {
+                x: -moveDistance * cosAngle,
+                y: -moveDistance * sinAngle,
+              },
+              {
+                x: moveDistance * cosAngle,
+                y: moveDistance * sinAngle,
+                duration: duration,
+                ease: "none",
+              }
+            );
+        }
+        animations[className].resume();
+      };
+
+      ScrollTrigger.create({
+        trigger: element,
+        start: "top bottom+=400",
+        end: "bottom top-=400",
+        markers: true,
+        onEnter: startAnimation,
+        onLeave: () => animations[className]?.pause(),
+        onEnterBack: startAnimation,
+        onLeaveBack: () => animations[className]?.pause(),
+      });
+    });
+
     window.addEventListener("mousemove", handleMouseMove);
   }, []);
 
@@ -260,9 +312,6 @@ const StarrySky = () => {
                 alt="Clic"
                 onClick={handleButtonClick}
               />
-            </div>
-            <div className="messageContainer">
-              <p className="handwrittenMessage">Your beacon for agility.</p>
             </div>
           </div>
         </div>

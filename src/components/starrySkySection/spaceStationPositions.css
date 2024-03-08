@@ -1,100 +1,157 @@
+/* WIP A nettoyer avec le reste de la spacestation */
+
+.spaceShipG1,
+.spaceShipG2,
+.spaceShipG3,
+.spaceShipG4 {
+    display: none;
+}
+
 .spaceShipA1 {
-    width: 7vw;
+    width: 15vw;
     height: auto;
 }
 
 .spaceShipA2 {
-    width: 7vw;
+    width: 30vw;
     height: auto;
 }
 
 .spaceShipA3 {
-    width: 7vw;
+    width: 15vw;
     height: auto;
 }
 
-.spaceShipA4 {
-    width: 7vw;
+.spaceShipA4,
+.spaceShipA5,
+.spaceShipA6 {
+    width: 15vw;
     height: auto;
 }
 
 .spaceShipB1 {
-    width: 7vw;
+    width: 15vw;
     height: auto;
 }
 
 .spaceShipB2 {
-    width: 7vw;
+    width: 15vw;
     height: auto;
 }
 
 .spaceShipB3 {
-    width: 7vw;
+    width: 23vw;
+    height: auto;
+}
+
+.spaceShipB4 {
+    width: 28vw;
     height: auto;
 }
 
 .spaceShipC1 {
-    width: 7vw;
+    width: 30vw;
+    height: auto;
+}
+
+.spaceShipC2 {
+    width: 15vw;
+    height: auto;
+}
+
+.spaceShipC3 {
+    width: 15vw;
     height: auto;
 }
 
 .spaceShipD1 {
-    width: 7vw;
+    width: 17vw;
     height: auto;
 }
 
 .spaceShipD2 {
-    width: 7vw;
+    width: 35vw;
     height: auto;
 }
 
 .spaceShipD3 {
-    width: 7vw;
+    width: 30vw;
+    height: auto;
+}
+
+.spaceShipD4 {
+    width: 30vw;
     height: auto;
 }
 
 .spaceShipE1 {
-    width: 7vw;
+    width: 76vw;
     height: auto;
 }
 
 .spaceShipE2 {
-    width: 7vw;
+    width: 35vw;
     height: auto;
 }
 
 .spaceShipE3 {
-    width: 7vw;
+    width: 17vw;
     height: auto;
 }
 
 .spaceShipF1 {
-    width: 7vw;
+    width: 40vw;
     height: auto;
 }
 
 .spaceShipF2 {
-    width: 7vw;
+    width: 30vw;
     height: auto;
 }
 
 .spaceShipF3 {
-    width: 7vw;
+    width: 41vw;
+    height: auto;
+}
+
+.spaceShipF4 {
+    width: 47vw;
     height: auto;
 }
 
 .spaceShipG1 {
-    width: 7vw;
+    width: 15vw;
     height: auto;
 }
 
 .spaceShipG2 {
-    width: 7vw;
+    width: 53vw;
     height: auto;
 }
 
 .spaceShipG3 {
-    width: 7vw;
+    width: 27vw;
+    height: auto;
+}
+
+.spaceShipG4 {
+    width: 54vw;
+    height: auto;
+}
+
+
+.spaceShipH1 {
+    width: 60vw;
+    height: auto;
+}
+
+.spaceShipH2 {
+    width: 30vw;
+    height: auto;
+}
+
+.spaceShipH3 {
+    width: 46vw;
     height: auto;
 }
 
@@ -124,159 +181,263 @@
 }
 
 .spaceStation6 {
-    width: 27vw;
+    width: 45vw;
     height: auto;
 }
 
 .spaceStation7 {
-    width: 30vw;
+    width: 40vw;
     height: auto;
 }
 
 .spaceStation8 {
-    width: 22vw;
+    width: 30vw;
     height: auto;
 }
 
 
 .spaceShipA1Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 142vw;
+    left: 0vw;
+    z-index: 4;
 }
 
 .spaceShipA2Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 140vw;
+    left: 10vw;
+    z-index: 6;
 }
 
 .spaceShipA3Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 145vw;
+    left: 20vw;
+    z-index: 4;
 }
 
 .spaceShipA4Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
+    top: 142vw;
+    left: 30vw;
+    z-index: 3;
+}
+
+.spaceShipA5Container {
+    position: absolute;
+    top: 113vw;
+    left: 70vw;
+    z-index: 3;
+}
+
+.spaceShipA6Container {
+    position: absolute;
+    top: 180vw;
+    left: -40vw;
     z-index: 3;
 }
 
 .spaceShipB1Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 115vw;
+    left: 50vw;
+    z-index: 2;
+    transform: rotate(20deg);
+
 }
 
 .spaceShipB2Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 122vw;
+    left: 54vw;
+    z-index: 2;
+    transform: rotate(20deg);
+
 }
 
 .spaceShipB3Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
+    top: 121vw;
+    left: 62vw;
+    z-index: 4;
+    transform: rotate(20deg);
+
+}
+
+.spaceShipB4Container {
+    position: absolute;
+    top: 128vw;
+    left: 65vw;
     z-index: 3;
+    transform: rotate(20deg);
 }
 
 .spaceShipC1Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 159vw;
+    left: 0vw;
+    z-index: 1;
+    transform: rotate(3deg);
+}
+
+.spaceShipC2Container {
+    position: absolute;
+    top: 161vw;
+    left: 30vw;
+    z-index: 1;
+    transform: rotate(183deg);
+}
+
+.spaceShipC3Container {
+    position: absolute;
+    top: 159vw;
+    left: 0vw;
+    z-index: 2;
+    transform: rotate(3deg);
+
 }
 
 .spaceShipD1Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
+    top: 154vw;
+    left: 75vw;
     z-index: 3;
+    transform: rotate(-15deg);
+
 }
 
 .spaceShipD2Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
+    top: 161vw;
+    left: 58vw;
     z-index: 3;
+    transform: rotate(-15deg);
+
 }
 
 .spaceShipD3Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
+    top: 160vw;
+    left: 49vw;
     z-index: 3;
+    transform: rotate(-15deg);
+}
+
+.spaceShipD4Container {
+    position: absolute;
+    top: 160vw;
+    left: 49vw;
+    z-index: 3;
+    transform: rotate(-15deg);
+
 }
 
 .spaceShipE1Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 123vw;
+    left: 0vw;
+    z-index: 4;
+    transform: rotate(5deg);
+
 }
 
 .spaceShipE2Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 120vw;
+    left: 10vw;
+    z-index: 2;
+    transform: rotate(5deg);
 }
 
 .spaceShipE3Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 124vw;
+    left: 44vw;
+    z-index: 1;
+    transform: rotate(5deg);
 }
 
 .spaceShipF1Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 179vw;
+    left: 0vw;
+    z-index: 5;
 }
 
 .spaceShipF2Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 174vw;
+    left: 41vw;
+    z-index: 4;
 }
 
 .spaceShipF3Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
+    top: 185vw;
+    left: 43vw;
     z-index: 3;
+}
+
+.spaceShipF4Container {
+    position: absolute;
+    top: 181vw;
+    left: 27vw;
+    z-index: 2;
+    transform: rotate(-5deg);
 }
 
 .spaceShipG1Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 68vw;
+    left: 0vw;
+    z-index: -1;
+    transform: rotate(-16deg);
 }
 
 .spaceShipG2Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
-    z-index: 3;
+    top: 62vw;
+    left: 10vw;
+    z-index: -1;
+    transform: rotate(-20deg);
 }
 
 .spaceShipG3Container {
     position: absolute;
-    top: 104vw;
-    left: 80vw;
+    top: 60vw;
+    left: 20vw;
+    z-index: -1;
+    transform: rotate(-20deg);
+}
+
+.spaceShipG4Container {
+    position: absolute;
+    top: 64vw;
+    left: 20vw;
+    z-index: -1;
+    transform: rotate(-20deg);
+}
+
+.spaceShipH1Container {
+    position: absolute;
+    top: 84vw;
+    left: 0vw;
     z-index: 3;
+}
+
+.spaceShipH2Container {
+    position: absolute;
+    top: 84vw;
+    left: 30vw;
+    z-index: 2;
+}
+
+.spaceShipH3Container {
+    position: absolute;
+    top: 84vw;
+    left: 24vw;
+    z-index: 1;
 }
 
 .spaceStation1Container {
@@ -295,7 +456,7 @@
 
 .spaceStation3Container {
     position: absolute;
-    top: 147vw;
+    top: 150vw;
     left: 40vw;
     z-index: 3;
 }
@@ -316,21 +477,21 @@
 
 .spaceStation6Container {
     position: absolute;
-    top: 147vw;
-    left: 25vw;
+    top: 138vw;
+    left: 15vw;
     z-index: 3;
 }
 
 .spaceStation7Container {
     position: absolute;
-    top: 165vw;
+    top: 183vw;
     left: 11vw;
     z-index: 3;
 }
 
 .spaceStation8Container {
     position: absolute;
-    top: 161vw;
+    top: 165vw;
     left: 64vw;
     z-index: 3;
 }

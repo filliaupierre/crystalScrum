@@ -35,7 +35,7 @@
 
 .planet5Container {
     position: absolute;
-    top: 147vw;
+    top: 127vw;
     left: 12vw;
     z-index: 1;
 }
@@ -79,7 +79,7 @@
     position: absolute;
     top: 70vw;
     left: 7vw;
-    z-index: 1;
+    z-index: 3;
 }
 
 

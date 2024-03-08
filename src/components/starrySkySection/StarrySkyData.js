@@ -44,22 +44,38 @@ import spaceShipA1 from "./assets/starrySkyAssets/spaceStation/spaceShipA1.png";
 import spaceShipA2 from "./assets/starrySkyAssets/spaceStation/spaceShipA2.png";
 import spaceShipA3 from "./assets/starrySkyAssets/spaceStation/spaceShipA3.png";
 import spaceShipA4 from "./assets/starrySkyAssets/spaceStation/spaceShipA4.png";
+import spaceShipA5 from "./assets/starrySkyAssets/spaceStation/spaceShipA4.png";
+import spaceShipA6 from "./assets/starrySkyAssets/spaceStation/spaceShipA4.png";
 import spaceShipB1 from "./assets/starrySkyAssets/spaceStation/spaceShipB1.png";
 import spaceShipB2 from "./assets/starrySkyAssets/spaceStation/spaceShipB2.png";
 import spaceShipB3 from "./assets/starrySkyAssets/spaceStation/spaceShipB3.png";
+import spaceShipB4 from "./assets/starrySkyAssets/spaceStation/spaceShipB2.png";
+
 import spaceShipC1 from "./assets/starrySkyAssets/spaceStation/spaceShipC1.png";
+import spaceShipC2 from "./assets/starrySkyAssets/spaceStation/spaceShipC2.png";
+import spaceShipC3 from "./assets/starrySkyAssets/spaceStation/spaceShipC3.png";
+
 import spaceShipD1 from "./assets/starrySkyAssets/spaceStation/spaceShipD1.png";
 import spaceShipD2 from "./assets/starrySkyAssets/spaceStation/spaceShipD2.png";
 import spaceShipD3 from "./assets/starrySkyAssets/spaceStation/spaceShipD3.png";
+import spaceShipD4 from "./assets/starrySkyAssets/spaceStation/spaceShipD4.png";
 import spaceShipE1 from "./assets/starrySkyAssets/spaceStation/spaceShipE1.png";
 import spaceShipE2 from "./assets/starrySkyAssets/spaceStation/spaceShipE2.png";
 import spaceShipE3 from "./assets/starrySkyAssets/spaceStation/spaceShipE3.png";
 import spaceShipF1 from "./assets/starrySkyAssets/spaceStation/spaceShipF1.png";
 import spaceShipF2 from "./assets/starrySkyAssets/spaceStation/spaceShipF2.png";
 import spaceShipF3 from "./assets/starrySkyAssets/spaceStation/spaceShipF3.png";
+import spaceShipF4 from "./assets/starrySkyAssets/spaceStation/spaceShipF4.png";
+
 import spaceShipG1 from "./assets/starrySkyAssets/spaceStation/spaceShipG1.png";
 import spaceShipG2 from "./assets/starrySkyAssets/spaceStation/spaceShipG2.png";
 import spaceShipG3 from "./assets/starrySkyAssets/spaceStation/spaceShipG3.png";
+import spaceShipG4 from "./assets/starrySkyAssets/spaceStation/spaceShipG4.png";
+
+import spaceShipH1 from "./assets/starrySkyAssets/spaceStation/spaceShipH1.png";
+import spaceShipH2 from "./assets/starrySkyAssets/spaceStation/spaceShipH2.png";
+import spaceShipH3 from "./assets/starrySkyAssets/spaceStation/spaceShipH3.png";
+
 import spaceStation1 from "./assets/starrySkyAssets/spaceStation/spaceStation1.png";
 import spaceStation2 from "./assets/starrySkyAssets/spaceStation/spaceStation2.png";
 import spaceStation3 from "./assets/starrySkyAssets/spaceStation/spaceStation3.png";
@@ -116,22 +132,34 @@ export const imagesStarrySky = {
   spaceShipA2,
   spaceShipA3,
   spaceShipA4,
+  spaceShipA5,
+  spaceShipA6,
   spaceShipB1,
   spaceShipB2,
   spaceShipB3,
+  spaceShipB4,
   spaceShipC1,
+  spaceShipC2,
+  spaceShipC3,
+
   spaceShipD1,
   spaceShipD2,
   spaceShipD3,
+  spaceShipD4,
   spaceShipE1,
   spaceShipE2,
   spaceShipE3,
   spaceShipF1,
   spaceShipF2,
   spaceShipF3,
+  spaceShipF4,
   spaceShipG1,
   spaceShipG2,
   spaceShipG3,
+  spaceShipG4,
+  spaceShipH1,
+  spaceShipH2,
+  spaceShipH3,
   spaceStation1,
   spaceStation2,
   spaceStation3,
@@ -178,13 +206,37 @@ export const spaceShipsA = [
   "spaceShipA2",
   "spaceShipA3",
   "spaceShipA4",
+  "spaceShipA5",
+  "spaceShipA6",
 ];
-export const spaceShipsB = ["spaceShipB1", "spaceShipB2", "spaceShipB3"];
-export const spaceShipsC = ["spaceShipC1"];
-export const spaceShipsD = ["spaceShipD1", "spaceShipD2", "spaceShipD3"];
+export const spaceShipsB = [
+  "spaceShipB1",
+  "spaceShipB2",
+  "spaceShipB3",
+  "spaceShipB4",
+];
+export const spaceShipsC = ["spaceShipC1", "spaceShipC2", "spaceShipC3"];
+export const spaceShipsD = [
+  "spaceShipD1",
+  "spaceShipD2",
+  "spaceShipD3",
+  "spaceShipD4",
+];
 export const spaceShipsE = ["spaceShipE1", "spaceShipE2", "spaceShipE3"];
-export const spaceShipsF = ["spaceShipF1", "spaceShipF2", "spaceShipF3"];
-export const spaceShipsG = ["spaceShipG1", "spaceShipG2", "spaceShipG3"];
+export const spaceShipsF = [
+  "spaceShipF1",
+  "spaceShipF2",
+  "spaceShipF3",
+  "spaceShipF4",
+];
+export const spaceShipsG = [
+  "spaceShipG1",
+  "spaceShipG2",
+  "spaceShipG3",
+  "spaceShipG4",
+];
+
+export const spaceShipsH = ["spaceShipH1", "spaceShipH2", "spaceShipH3"];
 
 export const spaceshipGroups = [
   spaceShipsA,
@@ -194,6 +246,7 @@ export const spaceshipGroups = [
   spaceShipsE,
   spaceShipsF,
   spaceShipsG,
+  spaceShipsH,
 ];
 
 export const spaceStations = [

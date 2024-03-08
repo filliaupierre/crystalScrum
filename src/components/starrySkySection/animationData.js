@@ -195,4 +195,47 @@ export const elementsData = [
   { className: "fog4", scrollSpeed: -1.5, parallaxStrength: 0.04 },
   { className: "fog5", scrollSpeed: -1.5, parallaxStrength: 0.05 },
   { className: "fog6", scrollSpeed: -1.5, parallaxStrength: 0.07 },
+
+  // { className: "spaceShipH1", scrollSpeed: -2 },
+  // { className: "spaceShipH2", scrollSpeed: -2 },
+  // { className: "spaceShipH3", scrollSpeed: -2 },
+];
+
+export const spaceshipData = [
+  { className: "spaceShipA1", duration: 15, angle: -25 },
+  { className: "spaceShipA2", duration: 45, angle: -25 },
+  { className: "spaceShipA3", duration: 20, angle: -25 },
+  { className: "spaceShipA4", duration: 30, angle: -25 },
+  { className: "spaceShipA5", duration: 43, angle: -25 },
+  { className: "spaceShipA6", duration: 42, angle: -25 },
+  { className: "spaceShipB1", duration: 25, angle: -180 },
+  { className: "spaceShipB2", duration: 10, angle: -180 },
+  { className: "spaceShipB3", duration: 30, angle: -180 },
+  { className: "spaceShipB4", duration: 20, angle: -180 },
+  { className: "spaceShipC1", duration: 10, angle: 0 },
+  { className: "spaceShipC2", duration: 8, angle: 0 },
+  { className: "spaceShipC3", duration: 8, angle: 0 },
+
+  { className: "spaceShipD1", duration: 14, angle: -180 },
+  { className: "spaceShipD2", duration: 10, angle: -180 },
+  { className: "spaceShipD3", duration: 12, angle: -180 },
+  { className: "spaceShipD4", duration: 16, angle: -180 },
+
+  { className: "spaceShipE1", duration: 18, angle: 3 },
+  { className: "spaceShipE2", duration: 15, angle: 3 },
+  { className: "spaceShipE3", duration: 12, angle: 3 },
+  { className: "spaceShipF1", duration: 25, angle: -7 },
+  { className: "spaceShipF2", duration: 20, angle: -7 },
+  { className: "spaceShipF3", duration: 15, angle: -7 },
+  { className: "spaceShipF4", duration: 10, angle: -7 },
+
+  // WIP A nettoyer avec le reste de la spacestation
+  // { className: "spaceShipG1", duration: 18, angle: 1 },
+  // { className: "spaceShipG2", duration: 12, angle: 1 },
+  // { className: "spaceShipG3", duration: 14, angle: 1 },
+  // { className: "spaceShipG4", duration: 10, angle: 1 },
+
+  { className: "spaceShipH1", duration: 35, angle: 0 },
+  { className: "spaceShipH2", duration: 20, angle: 0 },
+  { className: "spaceShipH3", duration: 15, angle: 0 },
 ];
