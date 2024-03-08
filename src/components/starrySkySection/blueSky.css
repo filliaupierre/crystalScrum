@@ -1,0 +1,21 @@
+.montgolfiere1,
+.montgolfiere2 {
+    position: absolute;
+    top: 240vw;
+    left: 20vw;
+    width: 10vw;
+    height: 10vw;
+    z-index: 1;
+}
+
+.circleCloud1 {
+    width: 30vw;
+    height: auto;
+}
+
+.circleCloud1Container {
+    position: absolute;
+    top: 265vw;
+    left: 24vw;
+    z-index: 3;
+}

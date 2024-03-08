@@ -55,7 +55,7 @@ export const elementsData = [
     parallaxStrength: 0.04,
   },
 
-  //Sur ce nibveau, rajouter de nombreux vaisseaux, genre station spaciale.
+  //Station spaciale.
   {
     className: "planet5",
     rotationSpeed: 100,
@@ -199,6 +199,13 @@ export const elementsData = [
   // { className: "spaceShipH1", scrollSpeed: -2 },
   // { className: "spaceShipH2", scrollSpeed: -2 },
   // { className: "spaceShipH3", scrollSpeed: -2 },
+
+  {
+    className: "circleCloud1",
+    scrollSpeed: -1.5,
+    parallaxStrength: 0.07,
+    rotationSpeed: 180,
+  },
 ];
 
 export const spaceshipData = [

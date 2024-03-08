@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./StarrySky.css";
-import "./orangeSky.css";
+import "./blueSky.css";
 import "./letterPositions.css";
 import "./planetsPositions.css";
 import "./astresPositions.css";
@@ -24,12 +24,7 @@ import {
   spaceStations,
 } from "./StarrySkyData";
 
-import {
-  imagesOrangeSky,
-  bubbles,
-  clouds,
-  montgolfieres,
-} from "./orangeSkyData";
+import { imagesBlueSky, montgolfieres, circleClouds } from "./blueSkyData";
 
 import { elementsData } from "./animationData";
 import { spaceshipData } from "./animationData";
@@ -476,8 +471,8 @@ const StarrySky = () => {
             ))}
           </div>
         </div>
-        <div className="orangeSkySection">
-          {bubbles.map((className, index) => (
+        <div className="blueSkySection">
+          {circleClouds.map((className, index) => (
             <div
               key={`${className}-${index}`}
               className={`${className}Container`}
@@ -485,26 +480,13 @@ const StarrySky = () => {
               <div className={`${className}Wrapper`}>
                 <img
                   className={className}
-                  src={imagesOrangeSky[className]}
+                  src={imagesBlueSky[className]}
                   alt=""
                 />
               </div>
             </div>
           ))}
-          {clouds.map((className, index) => (
-            <div
-              key={`${className}-${index}`}
-              className={`${className}Container`}
-            >
-              <div className={`${className}Wrapper`}>
-                <img
-                  className={className}
-                  src={imagesOrangeSky[className]}
-                  alt=""
-                />
-              </div>
-            </div>
-          ))}
+
           {montgolfieres.map((className, index) => (
             <div
               key={`${className}-${index}`}
@@ -513,7 +495,7 @@ const StarrySky = () => {
               <div className={`${className}Wrapper`}>
                 <img
                   className={className}
-                  src={imagesOrangeSky[className]}
+                  src={imagesBlueSky[className]}
                   alt=""
                 />
               </div>

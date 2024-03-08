@@ -141,7 +141,6 @@ export const imagesStarrySky = {
   spaceShipC1,
   spaceShipC2,
   spaceShipC3,
-
   spaceShipD1,
   spaceShipD2,
   spaceShipD3,
